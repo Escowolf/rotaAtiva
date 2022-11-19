@@ -1,17 +1,19 @@
 package com.rotativa.usersapi.Entidades;
 /* Este projeto utiliza SpringBoot. Para que o Spring reconheça as elementos 
 do projeto eles devem ser criados dentro da pasta userapi*/
-
+import java.util.*;
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.ManyToMany;
 
 @Entity
 @Table(name = "usuario")
-public class Usuario {
+public class Usuario implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idUsuario;
@@ -27,6 +29,7 @@ public class Usuario {
     private String senha;
     @Column(name = "ticket")
     private int ticket;
+
 
   public Usuario() {
     //
