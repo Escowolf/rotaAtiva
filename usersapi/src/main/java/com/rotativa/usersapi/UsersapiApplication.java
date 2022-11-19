@@ -6,15 +6,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
-@SpringBootApplication
+@SpringBootApplication (exclude = {SecurityAutoConfiguration.class})
 public class UsersapiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UsersapiApplication.class, args);
 
 	}
-  @Bean public BCryptPasswordEncoder bCryptPasswordEncoder() {
-    return new BCryptPasswordEncoder(); 
+  @Bean
+  public BCryptPasswordEncoder bCryptPasswordEncoder() {
+    BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(); 
+    return encoder;
 }
 
 }
