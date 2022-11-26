@@ -4,6 +4,13 @@
             "type": "java",
             "name": "Launch UsersapiApplication",
             "request": "launch",
+            "mainClass": "com.rotativa.usersapi.UsersapiApplication",
+            "projectName": "userapi"
+        },
+        {
+            "type": "java",
+            "name": "Launch UsersapiApplication",
+            "request": "launch",
             "mainClass": "com.rotativa.usersapi.Rest.UsersapiApplication",
             "projectName": "usersapi"
         },
