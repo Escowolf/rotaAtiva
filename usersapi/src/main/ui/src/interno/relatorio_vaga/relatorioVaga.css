@@ -1,8 +1,4 @@
-h1 {
+.margem-relatorio>.card-body h1 {
   color: #008579;
   font-weight: 600;
-}
-
-.margem {
-  margin: 0 20px 0 270px;
 }

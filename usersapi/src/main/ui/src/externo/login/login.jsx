@@ -5,6 +5,8 @@ import { log } from "../../dados/dadosFormulario";
 import { Link, useNavigate } from "react-router-dom";
 import UserService from "../../service/users";
 import { Cabecalho } from "../cabecalho/cabecalho";
+import { login } from "../../service/autenticacao";
+import API from "../../service/api";
 
 export function Login() {
   const userService = new UserService();
@@ -26,15 +28,35 @@ export function Login() {
 
   function logar(e) {
     e.preventDefault();
+
+    // login.then((resp) => {
+    //   API.defaults.headers.authorization = `Bearer ${resp.token}`
+    //   localStorage.setItem("Token", JSON.stringify(resp.token));
+    //   localStorage.setItem("usuarioLogado", JSON.stringify(resp.id));
+    //   navigate(`/menulogado/${resp.id}`, { replace: true });
+    // })
+    
     userService.getUsuario().then((resp) => {
       let login = resp.data.find((p) => p.email == email && p.senha == senha);
       if (login) {
-        console.log(login);
+        console.log(resp)
+        API.defaults.headers.authorization = `Bearer ${resp.token}`
+        localStorage.setItem("Token", JSON.stringify(login.token));
         localStorage.setItem("usuarioLogado", JSON.stringify(login.id));
         JSON.parse(localStorage.getItem("usuarioLogado"));
         navigate(`/menulogado/${login.id}`, { replace: true });
       }
-    });
+    })
+
+    // userService.getUsuario().then((resp) => {
+    //   let login = resp.data.find((p) => p.email == email && p.senha == senha);
+    //   if (login) {
+    //     console.log(login);
+    //     localStorage.setItem("usuarioLogado", JSON.stringify(login.id));
+    //     JSON.parse(localStorage.getItem("usuarioLogado"));
+    //     navigate(`/menulogado/${login.id}`, { replace: true });
+    //   }
+    // });
   }
 
   return (

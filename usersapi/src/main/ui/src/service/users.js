@@ -10,4 +10,8 @@ export default class UserService{
         return API.get("/usuario");
     }
 
+    putUsuario(id, usuario){
+        return API.put(`/usuario/${id}`, usuario);
+    }
+
 }

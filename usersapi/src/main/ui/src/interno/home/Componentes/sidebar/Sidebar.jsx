@@ -1,7 +1,32 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import UserService from "../../../../service/users";
 import "./Sidebar.css";
 
-export function navbarLateral() {
+export function NavbarLateral() {
+  const userService = new UserService();
+
+  const [usuario, setUsuario] = useState({
+    nome: "",
+    email: "",
+    cpf: "",
+    datanasc: ""
+  });
+
+  useEffect(() => {
+    userService.getUsuario().then((resp) => {
+      let id = localStorage.getItem("usuarioLogado")
+      let login = resp.data.find((p) => p.id == id);
+      if (login) {
+        setUsuario(login);
+        console.log(login);
+      }
+    })
+  }, [])
+
+
+
+
   return (
     <aside
       className="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left"
@@ -19,45 +44,56 @@ export function navbarLateral() {
           src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
           alt="Imagem do usuário"
         />
-        <div className="ms-2">
+        <div>
           <h5 className="fs-6 mb-0">
-            <a className="text-decoration-none" href="/#">
-              Matheus Dias
-            </a>
+            <Link className="btnSideBar" to={{ pathname: `/menulogado/perfil` }}>
+              <span>
+                {usuario.nome}
+              </span>
+            </Link>
           </h5>
-          <p className="mt-1 mb-0">Admin</p>
         </div>
-      </div>
-      {/* NAVBAR LATERAL - BUSCADOR */}
-      <div className="search position-relative text-center px-4 py-3 mt-2">
-        <input
-          type="text"
-          className="form-control w-100 border-0 bg-transparent"
-          placeholder="Buscar"
-        />
-        <i className="fa fa-search position-absolute d-block fs-6"></i>
       </div>
       {/* NAVBAR LATERAL - LINKS DE ACESSO */}
       <ul className="categories list-unstyled">
         <li className="">
           <i className="uil-estate fa-fw"></i>
-          <Link to="/menulogado/1">Dashboard</Link>
+          <Link className="btnSideBar" to="/menulogado/1">
+            <img src="/img/dashboard.svg" alt="Dashboard" />
+            <span>Dashboard</span>
+          </Link>
         </li>
         <li>
           <i className="uil-map-marker"></i>
-          <Link to="/menulogado/relatorioVagas">Relatorio de Vagas</Link>
+          <Link className="btnSideBar" to="/menulogado/relatorioVagas">
+            <img src="/img/relatorio.svg" alt="Relatorio de Vagas" />
+            <span>Relatorio de Vagas</span>
+          </Link>
         </li>
         <li className="">
           <i className="uil-map-marker"></i>
-          <Link to="/menulogado/mapa">Mapa</Link>
+          <Link className="btnSideBar" to="/menulogado/relatorioUso">
+            <img src="/img/relatorio.svg" alt="Relatorio de Uso" />
+            <span>Relatorio de Uso</span>
+          </Link>
         </li>
         <li className="">
-          <i className="uil-setting"></i>
-          <a href="/#"> Configurações</a>
+          <i className="uil-map-marker"></i>
+          <Link className="btnSideBar" to="/menulogado/mapa">
+            <img src="/img/mapa.svg" alt="Mapa" />
+            <span>Mapa</span>
+          </Link>
+        </li>
+        <li className="">
+          <i className="uil-map-marker"></i>
+          <Link className="btnSideBar" to="/menulogado/editarVaga">
+            <img src="/img/mapa.svg" alt="Mapa" />
+            <span>Editar Vaga</span>
+          </Link>
         </li>
       </ul>
     </aside>
   );
 }
 
-export default navbarLateral;
+export default NavbarLateral;

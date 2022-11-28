@@ -25,7 +25,7 @@
 }
 
 .cadastro_formulario_botao{
-    background-color: var(--verde);
+    background-color: var(--verde-escuro);
     border: none;
     padding: 1rem 2rem;
     border-radius: 20px;

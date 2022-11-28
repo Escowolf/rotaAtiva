@@ -1,0 +1,197 @@
+.tituloPag {
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  color: #008579;
+  font-size: 36px;
+  margin-top: 20px;
+  margin-left: 160px;
+}
+
+.adicionar {
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  display: block;
+  width: 760px;
+  height: 520px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 160px;
+  color: white;
+  background-color: #252636;
+  border-radius: 20px;
+}
+
+.adicionar .adicionar_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 32px;
+}
+
+.adicionar .adicionar_titulo {
+  color: #008579;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.adicionar .adicionar_corpo {
+  gap: 0.5rem;
+}
+
+.adicionar .adicionar_corpo input {
+  width: 330px;
+  height: 30px;
+  margin-right: 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgb(245, 245, 245);
+}
+
+.adicionar .adicionar_corpo select {
+  width: 330px;
+  height: 30px;
+  margin-right: 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgb(245, 245, 245);
+}
+
+.adicionar .adicionar_corpo .longitude {
+  background-image: url("../imagens/longitude.png");
+  background-size: 15px;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.adicionar .adicionar_corpo .latitude {
+  background-image: url("../imagens/latitude.png");
+  background-size: 15px;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.adicionar .adicionar_corpo .nomedavaga {
+  background-image: url("../imagens/nomedavaga.png");
+  background-size: 15px;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  width: 678px;
+}
+
+.nomedarua,
+.nomedobairro {
+  background-image: url("../imagens/nomedavaga.png");
+  background-size: 15px;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.adicionar .adicionar_corpo .tipodevaga {
+  background-image: url("../imagens/tipodevaga.png");
+  background-size: 15px;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.adicionar .adicionar_corpo .horadeuso {
+  background-image: url("../imagens/horadeuso.png");
+  background-size: 15px;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.adicionar .adicionar_corpo .tempomaximo {
+  background-image: url("../imagens/tempomaximo.png");
+  background-size: 15px;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+.adicionar .adicionar_corpo input:hover {
+  background-color: white;
+}
+
+.adicionar .adicionar_corpo input:focus {
+  border: 2px solid #008579;
+}
+
+.adicionar .adicionar_corpo select:hover {
+  background-color: white;
+}
+
+.adicionar .adicionar_corpo select:focus {
+  border: 2px solid #008579;
+}
+
+/* BOTÃO */
+.botao_enviar {
+  width: 200px;
+  height: 48px;
+  border-radius: 5px;
+  margin-top: 30px;
+  align-self: center;
+  color: white;
+  background-color: #027373;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+}
+
+.botao_enviar:hover {
+  background-color: #f7bd23;
+  transition: all 150ms ease-out;
+}
+
+.adicionar .alternar {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+.adicionar .alternar .alternar_cadastrar {
+  margin-right: 5px;
+  width: 200px;
+  height: 48px;
+  color: white;
+  border-radius: 17px 0px 5px 0px;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  background-color: #008579;
+}
+
+.adicionar .alternar .alternar_cadastrar:focus {
+  background-color: #f7bd23;
+  transition: all 150ms ease-out;
+  border-bottom: 4px solid #008579;
+  border-right: 3px solid #008579;
+}
+
+.adicionar .alternar .alternar_remover {
+  margin-right: 5px;
+  width: 200px;
+  height: 48px;
+  color: white;
+  border-radius: 0px 0px 5px 5px;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  background-color: #008579;
+}
+
+.adicionar .alternar .alternar_remover:focus {
+  background-color: #f7bd23;
+  transition: all 150ms ease-out;
+  border-bottom: 4px solid #008579;
+  border-right: 3px solid #008579;
+}
+
+.remover span:hover {
+  color: var(--bs-link-hover-color);
+  cursor: pointer;
+}
