@@ -4,9 +4,9 @@ import org.springframework.data.jpa.repository.*;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.rotativa.usersapi.model.Transacao;
 
-import com.rotativa.usersapi.Entidades.Transacao;
+import java.util.List;
 
 @Repository
 public interface TransacaoRepository extends JpaRepository<Transacao, Long> {

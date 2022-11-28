@@ -2,7 +2,7 @@ package com.rotativa.usersapi.controllers;
 
 import java.util.List;
 
-import com.rotativa.usersapi.Entidades.Transacao;
+import com.rotativa.usersapi.model.Transacao;
 import com.rotativa.usersapi.services.TransacaoService;
 
 import org.springframework.beans.factory.annotation.Autowired;

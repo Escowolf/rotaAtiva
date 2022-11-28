@@ -1,4 +1,4 @@
-package com.rotativa.usersapi.ServiceImpl;
+package com.rotativa.usersapi.services.serviceImpl;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.rotativa.usersapi.Entidades.Usuario;
+import com.rotativa.usersapi.model.Usuario;
 import com.rotativa.usersapi.repository.UsuarioRepository;
 import com.rotativa.usersapi.services.UsuarioService;
 

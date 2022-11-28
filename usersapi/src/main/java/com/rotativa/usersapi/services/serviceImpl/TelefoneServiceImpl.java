@@ -1,11 +1,11 @@
-package com.rotativa.usersapi.ServiceImpl;
+package com.rotativa.usersapi.services.serviceImpl;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.rotativa.usersapi.Entidades.Telefone;
+import com.rotativa.usersapi.model.Telefone;
 import com.rotativa.usersapi.repository.TelefoneRepository;
 import com.rotativa.usersapi.services.TelefoneService;
 

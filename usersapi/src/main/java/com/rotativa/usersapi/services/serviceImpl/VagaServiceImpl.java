@@ -1,11 +1,11 @@
-package com.rotativa.usersapi.ServiceImpl;
+package com.rotativa.usersapi.services.serviceImpl;
 
 import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.rotativa.usersapi.Entidades.Vaga;
+import com.rotativa.usersapi.model.Vaga;
 import com.rotativa.usersapi.repository.VagaRepository;
 import com.rotativa.usersapi.services.VagaService;
 

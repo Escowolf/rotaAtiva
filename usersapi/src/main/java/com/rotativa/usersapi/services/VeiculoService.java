@@ -2,7 +2,7 @@ package com.rotativa.usersapi.services;
 import java.util.List;
 import java.util.Optional;
 
-import com.rotativa.usersapi.Entidades.Veiculo;
+import com.rotativa.usersapi.model.Veiculo;
 
 public interface VeiculoService {
 

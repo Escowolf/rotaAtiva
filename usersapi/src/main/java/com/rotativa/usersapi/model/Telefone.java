@@ -1,6 +1,7 @@
-package com.rotativa.usersapi.Entidades;
+package com.rotativa.usersapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.io.Serializable;
 import javax.persistence.*;
 

@@ -1,50 +1,53 @@
 package com.rotativa.usersapi.controllers;
-// package com.rotativa.usersapi.controllers;
 
-// import java.util.List;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.*;
 
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.web.bind.annotation.CrossOrigin;
-// import org.springframework.web.bind.annotation.*;
-// import org.springframework.web.bind.annotation.RequestMapping;
-// import org.springframework.web.bind.annotation.RestController;
+import com.rotativa.usersapi.model.AdministradorModel;
+import com.rotativa.usersapi.repository.AdministradorRepository;
 
-// import com.rotativa.usersapi.Entidades.administradr;
-// import com.rotativa.usersapi.services.AdministradorService;
+import java.util.List;
+import java.util.Optional;
 
-// @CrossOrigin(origins = "http://localhost:3000")
-// @RestController
-// @RequestMapping("/administrador")
-// public class AdministradorController {
-//     @Autowired
-//     AdministradorService administradorService;
+@CrossOrigin(origins = "http://localhost:3000") 
+@RestController
+@RequestMapping("/administradores")
+public class AdministradorController {
 
-//     @GetMapping("/administradores")
-//     public List<administradr> listar(){
-//         return administradorService.findAll();
-//     }
+    private final AdministradorRepository repository;
+    private final PasswordEncoder encoder;
 
-//     @PostMapping("/cadastrar")
-//     public void salvar(@RequestBody administradr administrador){
-//         administradorService.save(administrador);
-//     }
+    public AdministradorController(AdministradorRepository repository, PasswordEncoder encoder) {
+        this.repository = repository;
+        this.encoder = encoder;
+    }
 
-//     @PutMapping
-//     public void alterar(@RequestBody administradr administrador){
-//         administradorService.update(administrador);
-//     }
+    @GetMapping("/listarTodos")
+    public ResponseEntity<List<AdministradorModel>> listarTodos() {
+        return ResponseEntity.ok(repository.findAll());
+    }
 
-//     // @GetMapping("/buscar")
-//     // public List<Administrador> buscarAdm(@RequestParam("email") String email,@RequestParam("senha") int senha) {
-//     //     System.out.println("email = " +email+" senha: "+ senha);
-//     //     List<Administrador> administrador = administradorService.buscaAdm(email, senha);
-//     //     if (administrador.isEmpty()) {
-//     //         System.out.println("sim");
-           
-//     //     } else { 
-//     //         System.out.println("não");
-//     //     }
-//     //     return administrador;
-//     // }
+    @PostMapping("/cadastrar")
+    public ResponseEntity<AdministradorModel> salvar(@RequestBody AdministradorModel administrador) {
+        administrador.setPassword(encoder.encode(administrador.getPassword()));
+        return ResponseEntity.ok(repository.save(administrador));
+    }
 
-// }
+    @GetMapping("/validarSenha")
+    public ResponseEntity<Boolean> validarSenha(@RequestParam String email,
+                                                @RequestParam String password) {
+
+        Optional<AdministradorModel> optAdministrador = repository.findByEmail(email);
+        if (optAdministrador.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(false);
+        }
+
+        AdministradorModel administrador = optAdministrador.get();
+        boolean valid = encoder.matches(password, administrador.getPassword());
+
+        HttpStatus status = (valid) ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;
+        return ResponseEntity.status(status).body(valid);
+    }
+}

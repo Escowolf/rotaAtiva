@@ -1,4 +1,4 @@
-package com.rotativa.usersapi.Entidades;
+package com.rotativa.usersapi.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -21,8 +21,8 @@ public class Veiculo implements Serializable {
     @Column(name = "placa")
     private String placa;
 
-    @Column(name = "modeloe")
-    private String modeloe;
+    @Column(name = "modelo")
+    private String modelo;
 
     public Long getId() {
         return this.id;
@@ -63,17 +63,17 @@ public class Veiculo implements Serializable {
         this.placa = placa;
     }
 
-    public String getModeloe() {
-        return this.modeloe;
+    public String getModelo() {
+        return this.modelo;
     }
 
-    public Veiculo modeloe(String modeloe) {
-        this.setModeloe(modeloe);
+    public Veiculo modelo(String modelo) {
+        this.setModelo(modelo);
         return this;
     }
 
-    public void setModeloe(String modeloe) {
-        this.modeloe = modeloe;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     @Override
@@ -98,7 +98,7 @@ public class Veiculo implements Serializable {
             "id=" + getId() +
             ", cor='" + getCor() + "'" +
             ", placa='" + getPlaca() + "'" +
-            ", modeloe='" + getModeloe() + "'" +
+            ", modelo='" + getModelo() + "'" +
             "}";
     }
 }

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 // import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rotativa.usersapi.Entidades.Usuario;
+import com.rotativa.usersapi.model.Usuario;
 import com.rotativa.usersapi.services.UsuarioService;
 
 @CrossOrigin(origins = "http://localhost:3000") 

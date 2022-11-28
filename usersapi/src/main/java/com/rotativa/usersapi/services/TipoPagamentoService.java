@@ -2,7 +2,7 @@ package com.rotativa.usersapi.services;
 import java.util.List;
 import java.util.Optional;
 
-import com.rotativa.usersapi.Entidades.TipoPagamento;
+import com.rotativa.usersapi.model.TipoPagamento;
 
 public interface TipoPagamentoService {
 

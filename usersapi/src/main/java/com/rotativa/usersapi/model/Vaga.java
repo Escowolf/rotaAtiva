@@ -1,7 +1,7 @@
-package com.rotativa.usersapi.Entidades;
+package com.rotativa.usersapi.model;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Time;
 
 import javax.persistence.*;
 
@@ -42,10 +42,10 @@ public class Vaga implements Serializable {
     private Double latitudeFinal;
 
     @Column(name = "horario_uso_inicial")
-    private Date horarioUsoInicial;
+    private Time horarioUsoInicial;
 
     @Column(name = "horario_uso_final")
-    private Date horarioUsoFinal;
+    private Time horarioUsoFinal;
 
      public Vaga(
             Long id,
@@ -189,19 +189,19 @@ public class Vaga implements Serializable {
         this.latitudeFinal = latitudeFinal;
     }
 
-    public Date getHorarioUsoInicial() {
+    public Time getHorarioUsoInicial() {
         return horarioUsoInicial;
     }
 
-    public void setHorarioUsoInicial(Date horarioUsoInicial) {
+    public void setHorarioUsoInicial(Time horarioUsoInicial) {
         this.horarioUsoInicial = horarioUsoInicial;
     }
 
-    public Date getHorarioUsoFinal() {
+    public Time getHorarioUsoFinal() {
         return horarioUsoFinal;
     }
 
-    public void setHorarioUsoFinal(Date horarioUsoFinal) {
+    public void setHorarioUsoFinal(Time horarioUsoFinal) {
         this.horarioUsoFinal = horarioUsoFinal;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and

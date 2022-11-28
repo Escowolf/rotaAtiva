@@ -4,7 +4,7 @@ import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.rotativa.usersapi.Entidades.Usuario;
+import com.rotativa.usersapi.model.Usuario;
 
 public interface UsuarioService {
 

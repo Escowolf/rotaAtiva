@@ -2,7 +2,7 @@ package com.rotativa.usersapi.services;
 import java.util.List;
 import java.util.Optional;
 
-import com.rotativa.usersapi.Entidades.Transacao;
+import com.rotativa.usersapi.model.Transacao;
 
 public interface TransacaoService {
 

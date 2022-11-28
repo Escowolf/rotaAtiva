@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.*;
 // import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.rotativa.usersapi.Entidades.Usuario;
+import com.rotativa.usersapi.model.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {

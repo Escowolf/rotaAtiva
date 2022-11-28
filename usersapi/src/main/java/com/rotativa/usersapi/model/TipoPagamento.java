@@ -1,4 +1,4 @@
-package com.rotativa.usersapi.Entidades;
+package com.rotativa.usersapi.model;
 
 import java.io.Serializable;
 import javax.persistence.*;

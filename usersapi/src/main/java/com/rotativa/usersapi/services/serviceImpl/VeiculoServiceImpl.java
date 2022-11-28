@@ -1,4 +1,4 @@
-package com.rotativa.usersapi.ServiceImpl;
+package com.rotativa.usersapi.services.serviceImpl;
 
 
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.rotativa.usersapi.Entidades.Veiculo;
+import com.rotativa.usersapi.model.Veiculo;
 import com.rotativa.usersapi.repository.VeiculoRepository;
 import com.rotativa.usersapi.services.VeiculoService;
 
@@ -42,8 +42,8 @@ public class VeiculoServiceImpl implements VeiculoService {
                 if (veiculo.getPlaca() != null) {
                     existingVeiculo.setPlaca(veiculo.getPlaca());
                 }
-                if (veiculo.getModeloe() != null) {
-                    existingVeiculo.setModeloe(veiculo.getModeloe());
+                if (veiculo.getModelo() != null) {
+                    existingVeiculo.setModelo(veiculo.getModelo());
                 }
 
                 return existingVeiculo;
