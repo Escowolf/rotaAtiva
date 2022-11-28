@@ -21,7 +21,7 @@ public class Telefone implements Serializable {
 
     @ManyToOne
     @JsonIgnoreProperties(value = { "pagamentos", "telefones", "transacoes", "veiculos" }, allowSetters = true)
-    private Usuari usuario;
+    private Usuario usuario;
 
     public Long getId() {
         return this.id;
@@ -49,15 +49,15 @@ public class Telefone implements Serializable {
         this.numero = numero;
     }
 
-    public Usuari getUsuario() {
+    public Usuario getUsuario() {
         return this.usuario;
     }
 
-    public void setUsuario(Usuari usuario) {
-        this.usuario = usuario;
+    public void setUsuario(Usuario usuari) {
+        this.usuario = usuari;
     }
 
-    public Telefone usuario(Usuari usuario) {
+    public Telefone usuario(Usuario usuario) {
         this.setUsuario(usuario);
         return this;
     }

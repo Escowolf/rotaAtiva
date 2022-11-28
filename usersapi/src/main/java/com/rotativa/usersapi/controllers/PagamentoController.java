@@ -25,7 +25,7 @@ public class PagamentoController {
         return pagamentoService.findAll();
     }
 
-    @PostMapping
+    @PostMapping("/cadastrar")
     public void salvar(@RequestBody Pagamento pagamento){
         pagamentoService.save(pagamento);
     }

@@ -29,17 +29,17 @@ public class AdminiSController {
         return ResponseEntity.ok(repository.findAll());
     }
 
-    @PostMapping("/salvar")
+    @PostMapping("/cadastrar")
     public ResponseEntity<AdministradorModel> salvar(@RequestBody AdministradorModel administrador) {
         administrador.setPassword(encoder.encode(administrador.getPassword()));
         return ResponseEntity.ok(repository.save(administrador));
     }
 
     @GetMapping("/validarSenha")
-    public ResponseEntity<Boolean> validarSenha(@RequestParam String login,
+    public ResponseEntity<Boolean> validarSenha(@RequestParam String email,
                                                 @RequestParam String password) {
 
-        Optional<AdministradorModel> optAdministrador = repository.findByLogin(login);
+        Optional<AdministradorModel> optAdministrador = repository.findByEmail(email);
         if (optAdministrador.isEmpty()) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(false);
         }

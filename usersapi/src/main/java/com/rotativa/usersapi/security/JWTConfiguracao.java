@@ -17,17 +17,17 @@ import com.rotativa.usersapi.services.DetalheAdminServiceImpl;
 @EnableWebSecurity
 public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
 
-    private final DetalheAdminServiceImpl usuarioService;
+    private final DetalheAdminServiceImpl administradorService;
     private final PasswordEncoder passwordEncoder;
 
-    public JWTConfiguracao(DetalheAdminServiceImpl usuarioService, PasswordEncoder passwordEncoder) {
-        this.usuarioService = usuarioService;
+    public JWTConfiguracao(DetalheAdminServiceImpl administradorService, PasswordEncoder passwordEncoder) {
+        this.administradorService = administradorService;
         this.passwordEncoder = passwordEncoder;
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(usuarioService).passwordEncoder(passwordEncoder);
+        auth.userDetailsService(administradorService).passwordEncoder(passwordEncoder);
     }
 
     @Override

@@ -4,23 +4,23 @@ import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.rotativa.usersapi.Entidades.Usuari;
+import com.rotativa.usersapi.Entidades.Usuario;
 
 public interface UsuarioService {
 
     // List<Usuari> getUsuariosVaga(String nome);
 
-    Usuari save(Usuari usuario);
+    Usuario save(Usuario usuario);
 
-    Usuari update(Usuari usuario);
+    Usuario update(Usuario usuario);
 
-    Optional<Usuari> partialUpdate(Usuari usuario);
+    Optional<Usuario> partialUpdate(Usuario usuario);
 
-    List<Usuari> findAll();
+    List<Usuario> findAll();
 
-    Page<Usuari> findAllWithEagerRelationships(Pageable pageable);
+    Page<Usuario> findAllWithEagerRelationships(Pageable pageable);
 
-    Optional<Usuari> findOne(Long id);
+    Optional<Usuario> findOne(Long id);
 
     void delete(Long id);
 }

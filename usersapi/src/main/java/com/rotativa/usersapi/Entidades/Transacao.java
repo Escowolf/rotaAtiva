@@ -28,7 +28,7 @@ public class Transacao implements Serializable {
 
     @ManyToOne
     @JsonIgnoreProperties(value = { "pagamentos", "telefones", "transacoes"}, allowSetters = true)
-    private Usuari usuario;
+    private Usuario usuario;
 
     @ManyToOne
     private Vaga vaga;
@@ -39,7 +39,7 @@ public class Transacao implements Serializable {
 
     public Transacao(){}
 
-    public Transacao(Long id, LocalDate entrada, LocalDate saida, Integer ticketUsado, Usuari usuario, Vaga vaga) {
+    public Transacao(Long id, LocalDate entrada, LocalDate saida, Integer ticketUsado, Usuario usuario, Vaga vaga) {
         this.id = id;
         this.entrada = entrada;
         this.saida = saida;
@@ -96,15 +96,15 @@ public class Transacao implements Serializable {
         this.ticketUsado = ticketUsado;
     }
 
-    public Usuari getUsuario() {
+    public Usuario getUsuario() {
         return this.usuario;
     }
 
-    public void setUsuario(Usuari usuario) {
+    public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
 
-    public Transacao usuario(Usuari usuario) {
+    public Transacao usuario(Usuario usuario) {
         this.setUsuario(usuario);
         return this;
     }

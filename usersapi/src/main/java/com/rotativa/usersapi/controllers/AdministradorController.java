@@ -1,3 +1,4 @@
+package com.rotativa.usersapi.controllers;
 // package com.rotativa.usersapi.controllers;
 
 // import java.util.List;

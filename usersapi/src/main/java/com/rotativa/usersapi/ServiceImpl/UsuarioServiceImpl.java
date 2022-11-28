@@ -6,7 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.rotativa.usersapi.Entidades.Usuari;
+import com.rotativa.usersapi.Entidades.Usuario;
 import com.rotativa.usersapi.repository.UsuarioRepository;
 import com.rotativa.usersapi.services.UsuarioService;
 
@@ -21,17 +21,17 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public Usuari save(Usuari usuario) {
+    public Usuario save(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
 
     @Override
-    public Usuari update(Usuari usuario) {
+    public Usuario update(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
 
     @Override
-    public Optional<Usuari> partialUpdate(Usuari usuario) {
+    public Optional<Usuario> partialUpdate(Usuario usuario) {
 
         return usuarioRepository
             .findById(usuario.getId())
@@ -68,17 +68,17 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Usuari> findAll() {
+    public List<Usuario> findAll() {
         return usuarioRepository.findAllWithEagerRelationships();
     }
 
-    public Page<Usuari> findAllWithEagerRelationships(Pageable pageable) {
+    public Page<Usuario> findAllWithEagerRelationships(Pageable pageable) {
         return usuarioRepository.findAllWithEagerRelationships(pageable);
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<Usuari> findOne(Long id) {
+    public Optional<Usuario> findOne(Long id) {
         return usuarioRepository.findOneWithEagerRelationships(id);
     }
 

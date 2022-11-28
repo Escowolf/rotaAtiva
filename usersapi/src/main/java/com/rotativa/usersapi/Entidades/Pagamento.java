@@ -28,7 +28,7 @@ public class Pagamento implements Serializable {
 
     @ManyToOne
     @JsonIgnoreProperties(value = { "pagamentos", "telefones", "transacoes"}, allowSetters = true)
-    private Usuari usuario;
+    private Usuario usuario;
 
     @ManyToOne
     private TipoPagamento tipoPagamento;
@@ -85,15 +85,15 @@ public class Pagamento implements Serializable {
         this.ticket = quantidadeTicket;
     }
 
-    public Usuari getUsuario() {
+    public Usuario getUsuario() {
         return this.usuario;
     }
 
-    public void setUsuario(Usuari usuario) {
+    public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
 
-    public Pagamento usuario(Usuari usuario) {
+    public Pagamento usuario(Usuario usuario) {
         this.setUsuario(usuario);
         return this;
     }

@@ -8,19 +8,19 @@ import org.springframework.data.jpa.repository.*;
 // import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.rotativa.usersapi.Entidades.Usuari;
+import com.rotativa.usersapi.Entidades.Usuario;
 
 @Repository
-public interface UsuarioRepository extends JpaRepository<Usuari, Long> {
-    default Optional<Usuari> findOneWithEagerRelationships(Long id) {
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+    default Optional<Usuario> findOneWithEagerRelationships(Long id) {
         return this.findById(id);
     }
 
-    default List<Usuari> findAllWithEagerRelationships() {
+    default List<Usuario> findAllWithEagerRelationships() {
         return this.findAll();
     }
 
-    default Page<Usuari> findAllWithEagerRelationships(Pageable pageable) {
+    default Page<Usuario> findAllWithEagerRelationships(Pageable pageable) {
         return this.findAll(pageable);
     }
 

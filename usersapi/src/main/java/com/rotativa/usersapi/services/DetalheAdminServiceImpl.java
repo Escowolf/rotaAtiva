@@ -21,10 +21,10 @@ public class DetalheAdminServiceImpl implements UserDetailsService {
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<AdministradorModel> administrador = repository.findByLogin(username);
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        Optional<AdministradorModel> administrador = repository.findByEmail(email);
         if (administrador.isEmpty()) {
-            throw new UsernameNotFoundException("Usuário [" + username + "] não encontrado");
+            throw new UsernameNotFoundException("Usuário [" + email + "] não encontrado");
         }
 
         return new DetalheAdministradorData(administrador);

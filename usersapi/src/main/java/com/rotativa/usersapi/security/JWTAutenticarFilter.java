@@ -36,12 +36,12 @@ public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
     public Authentication attemptAuthentication(HttpServletRequest request,
                                                 HttpServletResponse response) throws AuthenticationException {
         try {
-            AdministradorModel usuario = new ObjectMapper()
+            AdministradorModel administrador = new ObjectMapper()
                     .readValue(request.getInputStream(),  AdministradorModel.class);
 
             return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
-                    usuario.getLogin(),
-                    usuario.getPassword(),
+                    administrador.getEmail(),
+                    administrador.getPassword(),
                     new ArrayList<>()
             ));
 
@@ -57,10 +57,10 @@ public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
                                             FilterChain chain,
                                             Authentication authResult) throws IOException, ServletException {
 
-        DetalheAdministradorData usuarioData = (DetalheAdministradorData) authResult.getPrincipal();
+        DetalheAdministradorData administradorData = (DetalheAdministradorData) authResult.getPrincipal();
 
         String token = JWT.create().
-                withSubject(usuarioData.getUsername())
+                withSubject(administradorData.getUsername())
                 .withExpiresAt(new Date(System.currentTimeMillis() + TOKEN_EXPIRACAO))
                 .sign(Algorithm.HMAC512(TOKEN_SENHA));
 

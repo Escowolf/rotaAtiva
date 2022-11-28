@@ -49,15 +49,15 @@ public class JWTValidarFilter extends BasicAuthenticationFilter {
 
     private UsernamePasswordAuthenticationToken getAuthenticationToken(String token) {
 
-        String usuario = JWT.require(Algorithm.HMAC512(JWTAutenticarFilter.TOKEN_SENHA))
+        String administrador = JWT.require(Algorithm.HMAC512(JWTAutenticarFilter.TOKEN_SENHA))
                 .build()
                 .verify(token)
                 .getSubject();
 
-        if (usuario == null) {
+        if (administrador == null) {
             return null;
         }
 
-        return new UsernamePasswordAuthenticationToken(usuario,null, new ArrayList<>());
+        return new UsernamePasswordAuthenticationToken(administrador,null, new ArrayList<>());
     }
 }

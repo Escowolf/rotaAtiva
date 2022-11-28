@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 // import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rotativa.usersapi.Entidades.Usuari;
+import com.rotativa.usersapi.Entidades.Usuario;
 import com.rotativa.usersapi.services.UsuarioService;
 
 @CrossOrigin(origins = "http://localhost:3000") 
@@ -23,17 +23,17 @@ public class UsuarioController {
     UsuarioService usersService;
 
     @GetMapping
-    public List<Usuari> listar(){
+    public List<Usuario> listar(){
         return this.usersService.findAll();
     }
 
     @PostMapping
-    public void salvar(@RequestBody Usuari usuario){
+    public void salvar(@RequestBody Usuario usuario){
         usersService.save(usuario);
     }
 
     @PutMapping
-    public void alterar(@RequestBody Usuari usuario){
+    public void alterar(@RequestBody Usuario usuario){
         usersService.partialUpdate(usuario);
     }
 

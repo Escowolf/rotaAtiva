@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 import javax.persistence.*;
 
 @Data
@@ -17,8 +19,17 @@ public class AdministradorModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(unique = true)
-    private String login;
+    private String email;
 
+    @Column(name = "nome")
+    private String nome;
+
+    @Column(name = "cpf")
+    private String cpf;
+
+    @Column(name = "nascimento")
+    private LocalDate nascimento;
+    
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
