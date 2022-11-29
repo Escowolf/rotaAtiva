@@ -1,18 +1,17 @@
-package com.rotativa.usersapi.Controllers;
+package com.rotativa.usersapi.controllers;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.rotativa.usersapi.Entidades.*;
-import com.rotativa.usersapi.Services.TelefoneService;
+import com.rotativa.usersapi.model.Telefone;
+import com.rotativa.usersapi.services.TelefoneService;
 // possui as operações operações básicas para manipular o usuário no bd
 @CrossOrigin(origins = "http://localhost:3000") //Permite que o back envie e receba dados de uma origem diferente
 @RestController
@@ -22,23 +21,18 @@ public class TelefoneController {
 	TelefoneService telefoneService;
 
     @GetMapping
-    public List<TelefoneModel> listar(){
-        return telefoneService.listar();
+    public List<Telefone> listar(){
+        return telefoneService.findAll();
     }
 
     @PostMapping
-    public void salvar(@RequestBody TelefoneModel telefone){
-        telefoneService.salvar(telefone);
+    public void salvar(@RequestBody Telefone telefone){
+        telefoneService.save(telefone);
     }
 
     @PutMapping
-    public void alterar(@RequestBody TelefoneModel telefone){
-        telefoneService.alterar(telefone);
-    }
-
-    @DeleteMapping
-    public void excluir(@RequestBody TelefoneModel telefone){
-        telefoneService.excluir(telefone);
+    public void alterar(@RequestBody Telefone telefone){
+        telefoneService.update(telefone);
     }
 
 }
