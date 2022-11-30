@@ -7,7 +7,7 @@ export default class UserService{
     }
 
     getUsuario(){
-        return API.get("/usuario");
+        return API.get("/administradores/listarTodos");
     }
 
     putUsuario(id, usuario){

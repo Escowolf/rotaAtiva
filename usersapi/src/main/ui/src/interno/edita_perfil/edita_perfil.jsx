@@ -39,12 +39,13 @@ export function EditaPerfil() {
         userService.getUsuario().then((resp) => {
             let id = localStorage.getItem("usuarioLogado")
             let login = resp.data.find((p) => p.id == id);
+            console.log(login)
             if (login) {
                 setUsuario(login)
                 setNome(login.nome)
                 setEmail(login.email);
                 setCpf(login.cpf);
-                setDatanasc(login.datanasc);
+                setDatanasc(login.nascimento);
             }
         })
     }, [])
