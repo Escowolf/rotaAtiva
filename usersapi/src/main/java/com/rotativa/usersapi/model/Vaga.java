@@ -47,6 +47,15 @@ public class Vaga implements Serializable {
     @Column(name = "horario_uso_final")
     private Time horarioUsoFinal;
 
+    @Column(name = "credito")
+    private Integer credito;
+
+    @Column(name = "total_veiculo")
+    private Integer totalVeiculos;
+
+    @Column(name = "tempo_uso")
+    private Integer tempoUso;
+
      public Vaga(
             Long id,
             String nome,
@@ -56,7 +65,10 @@ public class Vaga implements Serializable {
             Double longitudeInicial,
             Double longitudeFinal,
             Double latitudeInicial,
-            Double latitudeFinal) {
+            Double latitudeFinal,
+            Integer credito,
+            Integer totalVeiculos,
+            Integer tempoUso) {
 
         this.id = id;
         this.nome = nome;
@@ -67,6 +79,9 @@ public class Vaga implements Serializable {
         this.longitudeFinal = longitudeFinal;
         this.latitudeInicial = latitudeInicial;
         this.latitudeFinal = latitudeFinal;
+        this.credito = credito;
+        this.totalVeiculos = totalVeiculos;
+        this.tempoUso = tempoUso;
     }
 
     public Vaga() {
@@ -204,8 +219,31 @@ public class Vaga implements Serializable {
     public void setHorarioUsoFinal(Time horarioUsoFinal) {
         this.horarioUsoFinal = horarioUsoFinal;
     }
-    // jhipster-needle-entity-add-getters-setters - JHipster will add getters and
-    // setters here
+   
+    public Integer getCredito() {
+        return credito;
+    }
+
+    public void setCredito(Integer credito) {
+        this.credito = credito;
+    }
+
+    public Integer getTotalVeiculos() {
+        return totalVeiculos;
+    }
+
+    public void setTotalVeiculos(Integer totalVeiculos) {
+        this.totalVeiculos = totalVeiculos;
+    }
+
+    
+    public Integer getTempoUso() {
+        return tempoUso;
+    }
+
+    public void setTempoUso(Integer tempoUso) {
+        this.tempoUso = tempoUso;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -237,6 +275,9 @@ public class Vaga implements Serializable {
                 ", longitudeFinal=" + getLongitudeFinal() +
                 ", latitudeInicial=" + getLatitudeInicial() +
                 ", latitudeFinal=" + getLatitudeFinal() +
+                ", credito=" + getCredito() +
+                ", totalVeiculos=" + getTotalVeiculos() +
+                ", tempoUso=" + getTempoUso() +
                 "}";
     }
 }
