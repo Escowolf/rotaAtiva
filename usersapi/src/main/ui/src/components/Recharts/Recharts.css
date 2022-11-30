@@ -1,0 +1,10 @@
+*{
+    margin:auto;
+    text-align: center;
+}
+.graphic_container{
+    width: 90%!important;
+}
+.graphic_area{
+    margin:1vh;
+}
