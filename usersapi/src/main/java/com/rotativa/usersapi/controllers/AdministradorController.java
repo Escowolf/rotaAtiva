@@ -11,7 +11,7 @@ import com.rotativa.usersapi.repository.AdministradorRepository;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:3000") 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/administradores")
 public class AdministradorController {
@@ -22,6 +22,32 @@ public class AdministradorController {
     public AdministradorController(AdministradorRepository repository, PasswordEncoder encoder) {
         this.repository = repository;
         this.encoder = encoder;
+    }
+
+    @PostMapping("/editar")
+    public void update(@RequestBody AdministradorModel administrador) {
+
+        repository.findById(administrador.getId())
+                .map(existingUsuario -> {
+                    if (administrador.getCpf() != null) {
+                        existingUsuario.setCpf(administrador.getCpf());
+                    }
+                    if (administrador.getNome() != null) {
+                        existingUsuario.setNome(administrador.getNome());
+                    }
+                    if (administrador.getEmail() != null) {
+                        existingUsuario.setEmail(administrador.getEmail());
+                    }
+                    if (administrador.getPassword() != null) {
+                        existingUsuario.setPassword(administrador.getPassword());
+                    }
+                    if (administrador.getNascimento() != null) {
+                        existingUsuario.setNascimento(administrador.getNascimento());
+                    }
+                    return existingUsuario;
+                })
+                .map(repository::save);
+
     }
 
     @GetMapping("/listarTodos")
@@ -37,7 +63,7 @@ public class AdministradorController {
 
     @GetMapping("/validarSenha")
     public ResponseEntity<Boolean> validarSenha(@RequestParam String email,
-                                                @RequestParam String password) {
+            @RequestParam String password) {
 
         Optional<AdministradorModel> optAdministrador = repository.findByEmail(email);
         if (optAdministrador.isEmpty()) {

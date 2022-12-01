@@ -7,7 +7,7 @@ export function DadoUsuario() {
     const navigate = useNavigate();
 
     const infos = ["Nome", "E-mail", "CPF", "Data de Nascimento"]
-    const dados = [location.state.usuario.nome, location.state.usuario.email, location.state.usuario.cpf, location.state.usuario.datanasc]
+    const dados = [location.state.usuario.nome, location.state.usuario.email, location.state.usuario.cpf, location.state.usuario.nascimento]
 
     return (
         <>
@@ -48,7 +48,7 @@ export function DadoUsuario() {
                     <section className="statistics space3">
                         <div className="row">
                             {
-                                location.state.usuario.veiculo.map((item) => {
+                                location.state.usuario.veiculos.map((item) => {
                                     return (
                                         <div className="col-lg-4 formulario">
                                             <div className="box d-flex rounded-2 align-items-center p-3">

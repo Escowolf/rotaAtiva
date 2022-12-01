@@ -87,8 +87,8 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuarioRepository.deleteById(id);
     }
 
-    // @Override
-    // public List<Usuari> getUsuariosVaga(String nome) {
-    //     return usuarioRepository.getUsuariosVaga(nome);
-    // }
+    @Override
+    public List<Usuario> getUsuariosVaga(String nome) {
+        return usuarioRepository.getUsuariosVaga(nome);
+    }
 }

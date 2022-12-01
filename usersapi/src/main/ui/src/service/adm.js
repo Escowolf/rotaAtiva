@@ -6,4 +6,8 @@ export default class AdmService{
         return API.post(`/login`, user);
     }
 
+    editar(user){
+        return API.post("/administradores/editar", user)
+    }
+
 }

@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import AdmService from '../../service/adm';
 import UserService from '../../service/users';
 import './edita_perfil.css'
 
 
 export function EditaPerfil() {
     const userService = new UserService();
+    const admService = new AdmService();
     const [usuario, setUsuario] = useState({
         nome:""
     });
@@ -53,7 +55,7 @@ export function EditaPerfil() {
     function salvar(e) {
         e.preventDefault();
         let id = localStorage.getItem("usuarioLogado");
-        userService.putUsuario(id, {...usuario, nome, cpf, email, datanasc}).then(alert("cadastrado com sucesso"));
+        admService.editar({...usuario, nome, cpf, email, datanasc}).then(alert("cadastrado com sucesso"));
     }
 
     return (

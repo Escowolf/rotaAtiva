@@ -8,11 +8,12 @@ import {
 import { useEffect, useState } from "react";
 import './map.css'
 import AreasService from "../../service/areas";
+import VagaService from "../../service/vaga";
 
 const center = { lat: -3.735015, lng: -38.494695 };
 
 export function Map() {
-  const areasService = new AreasService();
+  const vagasService = new VagaService();
   const [dados, setDados] = useState([]);
 
   const { isLoaded } = useJsApiLoader({
@@ -21,7 +22,7 @@ export function Map() {
   });
 
   useEffect(() => {
-    areasService.getAreas().then((resp) => {
+    vagasService.getVaga().then((resp) => {
       setDados(resp.data);
     })
   }, [])
@@ -50,7 +51,7 @@ export function Map() {
                       onClick={() => {
                         setShowInfoWindow(true);
                       }}
-                      paths={d.path}
+                      paths={[{lat:d.latitudeInicial,lng:d.longitudeInicial},{lat:d.latitudeFinal,lng:d.longitudeFinal}]}
                     ></Polygon>
                   </>
                 );

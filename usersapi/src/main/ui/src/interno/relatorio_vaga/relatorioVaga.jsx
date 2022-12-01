@@ -83,7 +83,6 @@ export function RelatorioVagas() {
             </thead>
             <tbody>
               {currentTableData.map((item) => {
-                console.log(item)
                 return (
                   <tr>
                     <td>{item.nome}</td>
