@@ -4,6 +4,7 @@ import VagaService from "../../service/vaga";
 import Pagination from "../../components/Paginacao/Pagination";
 import { Link } from "react-router-dom";
 import AreasService from "../../service/areas";
+import { Alert, Collapse } from "@mui/material";
 
 let PageSize = 6;
 
@@ -17,6 +18,9 @@ export function RemoverVaga() {
   const [vagas, setVagas] = useState([]);
 
   const [lista, setLista] = useState([]);
+
+  const [alert, setAlert] = useState(false);
+  const [alertOk, setAlertOK] = useState(false);
 
   function testaBusca(nome) {
     const regex = new RegExp(buscar, "i");
@@ -41,7 +45,12 @@ export function RemoverVaga() {
   }, []);
 
   function excluir(id) {
-    vagaService.deleteVaga(id).then(alert("excluido com sucesso"));
+    vagaService.deleteVaga(id).then(()=>{setAlertOK(true); setAlert(false);}).catch(function(error){
+      if(error.response){
+        setAlert(true)
+        setAlertOK(false)
+      }
+    });;
   }
 
   const currentTableData = useMemo(() => {
@@ -87,7 +96,12 @@ export function RemoverVaga() {
                   </a>
                 </span>
               </div>
-
+              <Collapse in={alert}>
+                  <Alert severity="error" onClose={() => {setAlert(false)}}>Ocorreu um erro, tente novamente, mais tarde!</Alert>
+              </Collapse>
+              <Collapse in={alertOk}>
+                  <Alert onClose={() => {setAlertOK(false)}}>Cadastro realizado com sucesso!</Alert>
+              </Collapse>
               <table className="table table-hover table-responsive mb-0">
                 <thead>
                   <tr>

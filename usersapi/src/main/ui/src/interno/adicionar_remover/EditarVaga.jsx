@@ -1,3 +1,4 @@
+import { Alert, Collapse } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import AreasService from "../../service/areas";
@@ -18,6 +19,8 @@ export function EditarVaga() {
   const [tempo, setTempo] = useState("");
   const [tipoVaga, setTipoVaga] = useState("");
   const [hora, setHora] = useState("");
+  const [alert, setAlert] = useState(false);
+  const [alertOk, setAlertOK] = useState(false);
 
   function salvar(e) {
     e.preventDefault();
@@ -30,7 +33,12 @@ export function EditarVaga() {
       longitudeInicial: Number(lng),
       latitudeFinal: Number(lat2),
       longitudeFinal:  Number(lng2)
-    }).then(alert("cadastrado com sucesso"));
+    }).then(()=>{setAlertOK(true); setAlert(false);}).catch(function(error){
+      if(error.response){
+        setAlert(true)
+        setAlertOK(false)
+      }
+    });
   }
 
   return (
@@ -48,6 +56,12 @@ export function EditarVaga() {
           </div>
           <form className="adicionar_form" onSubmit={salvar}>
             <label className="adicionar_titulo">Vaga</label>
+          <Collapse in={alert}>
+              <Alert severity="error" onClose={() => {setAlert(false)}}>Ocorreu um erro, tente novamente, mais tarde!</Alert>
+          </Collapse>
+          <Collapse in={alertOk}>
+              <Alert onClose={() => {setAlertOK(false)}}>Cadastro realizado com sucesso!</Alert>
+          </Collapse>
             {/* Cadastro de Vaga */}
             <fieldset className="adicionar_corpo">
               <input

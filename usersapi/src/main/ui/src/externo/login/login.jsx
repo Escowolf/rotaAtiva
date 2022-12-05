@@ -8,6 +8,8 @@ import { Cabecalho } from "../cabecalho/cabecalho";
 import { login } from "../../service/autenticacao";
 import API from "../../service/api";
 import AdmService from "../../service/adm";
+import Alert from '@mui/material/Alert';
+import { Collapse } from "@mui/material";
 
 export function Login() {
   const admService = new AdmService();
@@ -16,7 +18,7 @@ export function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
-
+  const [alert, setAlert] = useState(false);
   const dados = [
     {
       campo: email,
@@ -47,6 +49,10 @@ export function Login() {
         navigate(`/menulogado/${login.id}`, { replace: true });
       }
       })
+    }).catch(function(error){
+      if(error.response){
+        setAlert(true)
+      }
     })
   }
 
@@ -56,7 +62,9 @@ export function Login() {
       <section className="login">
         <div className="container login_caixa">
           <h3>Inicie sua sessão</h3>
-
+          <Collapse in={alert}>
+            <Alert severity="error" onClose={() => {setAlert(false)}}>Email/senha incorreta, tente novamente!</Alert>
+          </Collapse>
           <form onSubmit={logar} className="login_formulario">
             {log().map((item) => {
               return (
