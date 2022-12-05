@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -27,13 +28,13 @@ public class VagaController {
     }
 
     @PostMapping
-    public void salvar(@RequestBody Vaga usuario){
-        vagaService.save(usuario);
+    public void salvar(@RequestBody Vaga vaga){
+        vagaService.save(vaga);
     }
 
     @PutMapping
-    public void alterar(@RequestBody Vaga usuario){
-        vagaService.update(usuario);
+    public void alterar(@RequestBody Vaga vaga){
+        vagaService.update(vaga);
     }
     
   /*   @GetMapping("/tempoUso")
@@ -87,11 +88,11 @@ public class VagaController {
 
     // }
 
-    // @PutMapping("/desativar")
-    // public void desativarVaga(@RequestParam("nome") String nome) {
+    @DeleteMapping
+    public void desativarVaga(@RequestParam("id") String id) {
         
-    //      vagaService.desativarVaga(nome);
+         vagaService.delete(Long.parseLong(id));
     
-    // }
+    }
 
 }

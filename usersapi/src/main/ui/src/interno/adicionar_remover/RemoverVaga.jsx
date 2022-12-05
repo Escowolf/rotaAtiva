@@ -41,8 +41,7 @@ export function RemoverVaga() {
   }, []);
 
   function excluir(id) {
-    vagaService.deleteVaga(id);
-    areasService.deleteAreas(id).then(alert("excluido com sucesso"));
+    vagaService.deleteVaga(id).then(alert("excluido com sucesso"));
   }
 
   const currentTableData = useMemo(() => {

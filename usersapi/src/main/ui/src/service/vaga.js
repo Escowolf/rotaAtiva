@@ -10,6 +10,6 @@ export default class VagaService {
   }
 
   deleteVaga(id) {
-    return API.delete(`/vaga/${id}`);
+    return API.delete(`/vaga/?id=${id}`);
   }
 }
