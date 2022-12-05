@@ -14,6 +14,7 @@ const ColoredLine = ({ color }) => (
 export function TopBar() {
 
   function logout(){
+    localStorage.removeItem("token")
     localStorage.removeItem("usuarioLogado")
   }
 
