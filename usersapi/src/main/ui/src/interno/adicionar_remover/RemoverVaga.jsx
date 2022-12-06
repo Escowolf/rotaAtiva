@@ -128,9 +128,9 @@ export function RemoverVaga() {
                             {item.logradouro} - {item.bairro}
                           </Link>
                         </td>
-                        <td>{item.credito}</td>
-                        <td>{item.totalVeiculos}</td>
-                        <td>{item.tempoUso} h</td>
+                        <td>{(item.credito == null || item.credito == undefined)  ? 0 : item.credito}</td>
+                        <td>{(item.totalVeiculos == null || item.totalVeiculos == undefined) ? 0 : item.totalVeiculos}</td>
+                        <td>{(item.tempoUso == null|| item.tempoUso == undefined) ? 0 : item.tempoUso} h</td>
                         <td
                           className="remover"
                           onClick={() => excluir(item.id)}
