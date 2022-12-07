@@ -17,6 +17,13 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+
+		<dependency>
+			<groupId>dev.buildtool</groupId>
+			<artifactId>tools</artifactId>
+			<version>0.1.2</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
 		<dependency>
 			<groupId>io.springfox</groupId>
