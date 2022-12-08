@@ -17,7 +17,7 @@ export function Map() {
   const [dados, setDados] = useState([]);
 
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyAQYGeShstIRAbsrS4lwyumbLwlG5t-sTA",
+    googleMapsApiKey: "AIzaSyB9z2S91_vb2LQS6VBMm3L0oJhemvEyLlk",
     libraries: ["places"],
   });
 
