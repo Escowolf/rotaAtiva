@@ -1,20 +1,18 @@
-package com.rotativa.usersapi.services;
+package com.rotativa.usersapi.Services;
+// interface criada em arquivo separado para manter a privacidade da implementação dos métodos.
 import java.util.List;
-import java.util.Optional;
 
-import com.rotativa.usersapi.model.Pagamento;
+import org.springframework.stereotype.Component;
+import com.rotativa.usersapi.Entidades.*;
 
+@Component
 public interface PagamentoService {
+ 
+    public List<PagamentoModel> listar();
+    
+    public void salvar(PagamentoModel pagamento);
 
-    Pagamento save(Pagamento pagamento);
+    public void alterar(PagamentoModel pagamento);
 
-    Pagamento update(Pagamento pagamento);
-
-    Optional<Pagamento> partialUpdate(Pagamento pagamento);
-
-    List<Pagamento> findAll();
-
-    Optional<Pagamento> findOne(Long id);
-
-    void delete(Long id);
+    public void excluir(PagamentoModel pagamento);
 }

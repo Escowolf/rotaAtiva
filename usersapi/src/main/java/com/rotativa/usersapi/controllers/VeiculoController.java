@@ -1,18 +1,19 @@
-package com.rotativa.usersapi.controllers;
+package com.rotativa.usersapi.Controllers;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.rotativa.usersapi.model.Veiculo;
-import com.rotativa.usersapi.services.VeiculoService;
-
+import com.rotativa.usersapi.Entidades.*;
+import com.rotativa.usersapi.Services.VeiculoService;
+// possui as operações operações básicas para manipular o usuário no bd
 @CrossOrigin(origins = "http://localhost:3000") //Permite que o back envie e receba dados de uma origem diferente
 @RestController
 @RequestMapping("/veiculo")
@@ -21,18 +22,23 @@ public class VeiculoController {
 	VeiculoService veiculoService;
 
     @GetMapping
-    public List<Veiculo> listar(){
-        return veiculoService.findAll();
+    public List<VeiculoModel> listar(){
+        return veiculoService.listar();
     }
 
     @PostMapping
-    public void salvar(@RequestBody Veiculo veiculo){
-        veiculoService.save(veiculo);
+    public void salvar(@RequestBody VeiculoModel veiculo){
+        veiculoService.salvar(veiculo);
     }
 
     @PutMapping
-    public void alterar(@RequestBody Veiculo veiculo){
-        veiculoService.update(veiculo);
+    public void alterar(@RequestBody VeiculoModel veiculo){
+        veiculoService.alterar(veiculo);
+    }
+
+    @DeleteMapping
+    public void excluir(@RequestBody VeiculoModel veiculo){
+        veiculoService.excluir(veiculo);
     }
 
 }

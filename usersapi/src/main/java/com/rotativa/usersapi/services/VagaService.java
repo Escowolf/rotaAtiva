@@ -1,22 +1,36 @@
-package com.rotativa.usersapi.services;
+package com.rotativa.usersapi.Services;
+import java.sql.Time;
+// interface criada em arquivo separado para manter a privacidade da implementação dos métodos.
 import java.util.List;
-import java.util.Optional;
 
-import com.rotativa.usersapi.model.Vaga;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Component;
+import com.rotativa.usersapi.Entidades.*;
 
+@Component
 public interface VagaService {
 
-    List<Vaga> buscarVaga(String nome);
+    public List<Time> tempoDeUsoVaga();
 
-    Vaga save(Vaga vaga);
+    public List<List<String>> enderecoVaga();
 
-    Vaga update(Vaga vaga);
+    List<List<String>> relatorioFinanceiro();
 
-    Optional<Vaga> partialUpdate(Vaga vaga);
+    List<List<String>> relatorioRank();
 
-    List<Vaga> findAll();
+    List<List<String>> relatorioFinanceiroPorVaga(@Param("nome") String nome );
+ 
+    public List<VagasModel> listar();
+    
+    public void salvar(VagasModel vagas);
 
-    Optional<Vaga> findOne(Long id);
+    public void alterar(VagasModel vagas);
 
-    void delete(Long id);
+    public void excluir(VagasModel vagas);
+
+    List<List<String>> buscarVaga(@Param("nome") String nome);
+
+    void desativarVaga(@Param("nome") String nome);
+
+    void ativarVaga(@Param("nome") String nome);
 }
