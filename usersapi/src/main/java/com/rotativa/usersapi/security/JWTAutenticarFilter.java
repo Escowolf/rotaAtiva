@@ -4,7 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rotativa.usersapi.data.DetalheAdministradorData;
-import com.rotativa.usersapi.model.AdministradorModel;
+import com.rotativa.usersapi.model.Administrador;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -36,8 +36,8 @@ public class JWTAutenticarFilter extends UsernamePasswordAuthenticationFilter {
     public Authentication attemptAuthentication(HttpServletRequest request,
                                                 HttpServletResponse response) throws AuthenticationException {
         try {
-            AdministradorModel administrador = new ObjectMapper()
-                    .readValue(request.getInputStream(),  AdministradorModel.class);
+            Administrador administrador = new ObjectMapper()
+                    .readValue(request.getInputStream(),  Administrador.class);
 
             return authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                     administrador.getEmail(),

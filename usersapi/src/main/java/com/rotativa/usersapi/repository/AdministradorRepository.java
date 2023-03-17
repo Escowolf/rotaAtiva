@@ -2,12 +2,12 @@ package com.rotativa.usersapi.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.rotativa.usersapi.model.AdministradorModel;
+import com.rotativa.usersapi.model.Administrador;
 
 import java.util.Optional;
 
-public interface AdministradorRepository extends JpaRepository<AdministradorModel, Integer> {
+public interface AdministradorRepository extends JpaRepository<Administrador, Integer> {
 
-    public Optional<AdministradorModel> findByEmail(String email);
+    public Optional<Administrador> findByEmail(String email);
 
 }

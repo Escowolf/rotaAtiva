@@ -3,7 +3,7 @@ package com.rotativa.usersapi.data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.rotativa.usersapi.model.AdministradorModel;
+import com.rotativa.usersapi.model.Administrador;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,9 +11,9 @@ import java.util.Optional;
 
 public class DetalheAdministradorData implements UserDetails {
 
-    private final Optional<AdministradorModel> administrador;
+    private final Optional<Administrador> administrador;
 
-    public DetalheAdministradorData(Optional<AdministradorModel> administrador) {
+    public DetalheAdministradorData(Optional<Administrador> administrador) {
         this.administrador = administrador;
     }
 
@@ -24,12 +24,12 @@ public class DetalheAdministradorData implements UserDetails {
 
     @Override
     public String getPassword() {
-        return administrador.orElse(new AdministradorModel()).getPassword();
+        return administrador.orElse(new Administrador()).getPassword();
     }
 
     @Override
     public String getUsername() {
-        return administrador.orElse(new AdministradorModel()).getEmail();
+        return administrador.orElse(new Administrador()).getEmail();
     }
 
     @Override
