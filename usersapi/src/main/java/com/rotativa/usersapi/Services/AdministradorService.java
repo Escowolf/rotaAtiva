@@ -1,21 +1,21 @@
-package com.rotativa.usersapi.Services;
+package com.rotativa.usersapi.services;
 
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.rotativa.usersapi.Entidades.*;
+import com.rotativa.usersapi.model.*;
 
 @Component
 public interface AdministradorService {
  
-    public List<AdministradorModel> listar();
+    public List<Administrador> listar();
     
-    public void salvar(AdministradorModel administrador);
+    public void salvar(Administrador administrador);
 
-    public void alterar(AdministradorModel administrador);
+    public void alterar(Administrador administrador);
 
-    public void excluir(AdministradorModel administrador);
+    public void excluir(Administrador administrador);
 
-    public List<AdministradorModel> buscaAdm(String email, int senha);
+    public List<Administrador> buscaAdm(String email, int senha);
 }

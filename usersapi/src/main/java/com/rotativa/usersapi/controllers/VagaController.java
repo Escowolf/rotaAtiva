@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.rotativa.usersapi.model.Vaga;
-import com.rotativa.usersapi.services.VagaService;
+import com.rotativa.usersapi.services.serviceImpl.*;
 // possui as operações operações básicas para manipular o usuário no bd
 @CrossOrigin(origins = "http://localhost:3000") //Permite que o back envie e receba dados de uma origem diferente
 @RestController
 @RequestMapping("/vaga")
 public class VagaController {
     @Autowired //o spring cria o objeto, injeta no atributo repositório
-	VagaService vagaService;
+	VagaServiceImpl vagaService;
 
     @GetMapping
     public List<Vaga> listar(){
