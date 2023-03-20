@@ -15,8 +15,8 @@ public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
-    @SequenceGenerator(name = "sequenceGenerator")
+    // @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    // @SequenceGenerator(name = "sequenceGenerator")
     @Column(name = "id")
     private Long id;
 
@@ -32,8 +32,8 @@ public class Usuario implements Serializable {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "senha")
-    private String senha;
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "nascimento")
     private LocalDate nascimento;
@@ -129,17 +129,17 @@ public class Usuario implements Serializable {
         this.email = email;
     }
 
-    public String getSenha() {
-        return this.senha;
+    public String getPassword() {
+        return this.password;
     }
 
-    public Usuario senha(String senha) {
-        this.setSenha(senha);
+    public Usuario password(String password) {
+        this.setPassword(password);
         return this;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public LocalDate getNascimento() {
@@ -321,7 +321,7 @@ public class Usuario implements Serializable {
             ", nome='" + getNome() + "'" +
             ", acessibilidade='" + getAcessibilidade() + "'" +
             ", email='" + getEmail() + "'" +
-            ", senha='" + getSenha() + "'" +
+            ", password='" + getPassword() + "'" +
             ", nascimento='" + getNascimento() + "'" +
             ", ticket=" + getTicket() +
             ", estado='" + getEstado() + "'" +
