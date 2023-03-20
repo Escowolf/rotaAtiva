@@ -6,7 +6,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import com.rotativa.usersapi.model.Administrador;
+import com.rotativa.usersapi.model.Usuario;
 import com.rotativa.usersapi.repository.AdministradorRepository;
+import com.rotativa.usersapi.repository.UsuarioRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,11 +19,13 @@ import java.util.Optional;
 public class AdministradorController {
 
     private final AdministradorRepository repository;
+    private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder encoder;
 
-    public AdministradorController(AdministradorRepository repository, PasswordEncoder encoder) {
+    public AdministradorController(AdministradorRepository repository, PasswordEncoder encoder,UsuarioRepository usuarioRepository) {
         this.repository = repository;
         this.encoder = encoder;
+        this.usuarioRepository = usuarioRepository;
     }
 
     @PostMapping("/editar")
@@ -55,7 +59,13 @@ public class AdministradorController {
         return ResponseEntity.ok(repository.findAll());
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/auth/user/cadastrar")
+    public ResponseEntity<Usuario> salvar(@RequestBody Usuario usuario) {
+        usuario.setPassword(encoder.encode(usuario.getPassword()));
+        return ResponseEntity.ok(usuarioRepository.save(usuario));
+    }
+
+    @PostMapping("/auth/admin/cadastrar")
     public ResponseEntity<Administrador> salvar(@RequestBody Administrador administrador) {
         administrador.setPassword(encoder.encode(administrador.getPassword()));
         return ResponseEntity.ok(repository.save(administrador));
