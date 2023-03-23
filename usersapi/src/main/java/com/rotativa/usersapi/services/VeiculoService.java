@@ -1,18 +1,20 @@
 package com.rotativa.usersapi.services;
-// interface criada em arquivo separado para manter a privacidade da implementação dos métodos.
 import java.util.List;
+import java.util.Optional;
 
-import org.springframework.stereotype.Component;
-import com.rotativa.usersapi.model.*;
+import com.rotativa.usersapi.model.Veiculo;
 
-@Component
 public interface VeiculoService {
- 
-    public List<Veiculo> listar();
-    
-    public void salvar(Veiculo veiculo);
 
-    public void alterar(Veiculo veiculo);
+    Veiculo save(Veiculo veiculo);
 
-    public void excluir(Veiculo veiculo);
+    Veiculo update(Veiculo veiculo);
+
+    Optional<Veiculo> partialUpdate(Veiculo veiculo);
+
+    List<Veiculo> findAll();
+
+    Optional<Veiculo> findOne(Long id);
+
+    void delete(Long id);
 }

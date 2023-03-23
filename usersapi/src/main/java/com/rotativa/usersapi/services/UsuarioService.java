@@ -1,24 +1,26 @@
-package com.rotativa.usersapi.Services;
-
+package com.rotativa.usersapi.services;
 import java.util.List;
-import org.springframework.stereotype.Component;
-import com.rotativa.usersapi.Entidades.*;
+import java.util.Optional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
-@Component
+import com.rotativa.usersapi.model.Usuario;
+
 public interface UsuarioService {
- 
-    public List<UsuarioModel> listar();
 
-    public void salvar(UsuarioModel users);
+    List<Usuario> getUsuariosVaga(String nome);
 
-    public void alterar(UsuarioModel usuario);
+    Usuario save(Usuario usuario);
 
-    public void excluir(UsuarioModel usuario);
+    Usuario update(Usuario usuario);
 
-    public List<UsuarioModel> carregarPorNome(String nome);
+    Optional<Usuario> partialUpdate(Usuario usuario);
 
-    public List<List<String>> relatorioUsuario();
+    List<Usuario> findAll();
 
-    
-    
+    Page<Usuario> findAllWithEagerRelationships(Pageable pageable);
+
+    Optional<Usuario> findOne(Long id);
+
+    void delete(Long id);
 }

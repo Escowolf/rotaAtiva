@@ -1,4 +1,4 @@
-package com.rotativa.usersapi.Controllers;
+package com.rotativa.usersapi.controllers;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.rotativa.usersapi.Entidades.*;
-import com.rotativa.usersapi.Services.VagaService;
+import com.rotativa.usersapi.model.Vaga;
+import com.rotativa.usersapi.services.VagaService;
 // possui as operações operações básicas para manipular o usuário no bd
 @CrossOrigin(origins = "http://localhost:3000") //Permite que o back envie e receba dados de uma origem diferente
 @RestController
@@ -23,80 +23,75 @@ public class VagaController {
 	VagaService vagaService;
 
     @GetMapping
-    public List<VagasModel> listar(){
-        return vagaService.listar();
+    public List<Vaga> listar(){
+        return vagaService.findAll();
     }
 
     @PostMapping
-    public void salvar(@RequestBody VagasModel usuario){
-        vagaService.salvar(usuario);
+    public void salvar(@RequestBody Vaga vaga){
+        vagaService.save(vaga);
     }
 
     @PutMapping
-    public void alterar(@RequestBody VagasModel usuario){
-        vagaService.alterar(usuario);
+    public void alterar(@RequestBody Vaga vaga){
+        vagaService.update(vaga);
     }
-
-    @DeleteMapping
-   public void excluir(@RequestBody VagasModel usuario) {
-       vagaService.excluir(usuario);
-   }
     
   /*   @GetMapping("/tempoUso")
     public List<Time> tempoUso() {
         List<Time> vagas = vagaService.tempoDeUsoVaga();
         return vagas;
     } */
-    @GetMapping("/endereco")
-    public List<List<String>> enderecoVaga() {
-        List<List<String>> retorno = vagaService.enderecoVaga();
-        return retorno;
-    }
-    @GetMapping("/relatorio")
-    List<List<String>> relatorioFinanceiro() {
-        List<List<String>> retorno = vagaService.relatorioFinanceiro();
-        return retorno;
-    }
+    // @GetMapping("/endereco")
+    // public List<List<String>> enderecoVaga() {
+    //     List<List<String>> retorno = vagaService.enderecoVaga();
+    //     return retorno;
+    // }
+    // @GetMapping("/relatorio")
+    // List<List<String>> relatorioFinanceiro() {
+    //     List<List<String>> retorno = vagaService.relatorioFinanceiro();
+    //     return retorno;
+    // }
    
-    @GetMapping("/relatorioPorVaga")
-    List<List<String>> relatorioFinanceiroPorVaga(@RequestParam("nome") String nome) {
-        List<List<String>> retorno = vagaService.relatorioFinanceiroPorVaga(nome);
-        return retorno;
-    }
+    // @GetMapping("/relatorioPorVaga")
+    // List<List<String>> relatorioFinanceiroPorVaga(@RequestParam("nome") String nome) {
+    //     List<List<String>> retorno = vagaService.relatorioFinanceiroPorVaga(nome);
+    //     return retorno;
+    // }
 
-    @GetMapping("/relatorioRank")
-    List<List<String>> relatorioFinanceioRank() {
-        List<List<String>> retorno = vagaService.relatorioRank();
-        return retorno;
-    }
+    // @GetMapping("/relatorioRank")
+    // List<List<String>> relatorioFinanceioRank() {
+    //     List<List<String>> retorno = vagaService.relatorioRank();
+    //     return retorno;
+    // }
     @GetMapping("/buscar")
-    List<List<String>> buscarVaga(@RequestParam("nome") String nome) {
-        List<List<String>> retorno = vagaService.buscarVaga(nome);
+    List<Vaga> buscarVaga(@RequestParam("nome") String nome) {
+        List<Vaga> retorno = vagaService.buscarVaga(nome);
         return retorno;
     }
 
-    @GetMapping("/teste")
-    String teste(@RequestParam("nome") String nome) {
-        String nomeTeste = "oi";
-        if (nomeTeste.equals(nome)) {
-            return "Deu certo";
-        } else {
-            return "Errado";
-        }
+    // @GetMapping("/teste")
+    // String teste(@RequestParam("nome") String nome) {
+    //     String nomeTeste = "oi";
+    //     if (nomeTeste.equals(nome)) {
+    //         return "Deu certo";
+    //     } else {
+    //         return "Errado";
+    //     }
 
-    }
+    // }
     
-    @PutMapping("/ativar")
-    public String ativarVaga(@RequestParam("nome") String nome) {
-        vagaService.ativarVaga(nome);
-        return "oi";
+    // @PutMapping("/ativar")
+    // public String ativarVaga(@RequestParam("nome") String nome) {
+    //     vagaService.ativarVaga(nome);
+    //     return "oi";
 
-    }
+    // }
 
-    @PutMapping("/desativar")
-    public void desativarVaga(@RequestParam("nome") String nome) {
+    @DeleteMapping
+    public void desativarVaga(@RequestParam("id") String id) {
         
-         vagaService.desativarVaga(nome);
+         vagaService.delete(Long.parseLong(id));
     
     }
 

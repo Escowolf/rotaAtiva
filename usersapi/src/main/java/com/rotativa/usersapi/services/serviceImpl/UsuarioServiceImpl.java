@@ -48,8 +48,8 @@ public class UsuarioServiceImpl implements UsuarioService {
                 if (usuario.getEmail() != null) {
                     existingUsuario.setEmail(usuario.getEmail());
                 }
-                if (usuario.getSenha() != null) {
-                    existingUsuario.setSenha(usuario.getSenha());
+                if (usuario.getPassword() != null) {
+                    existingUsuario.setPassword(usuario.getPassword());
                 }
                 if (usuario.getNascimento() != null) {
                     existingUsuario.setNascimento(usuario.getNascimento());
@@ -87,8 +87,9 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuarioRepository.deleteById(id);
     }
 
-    // @Override
-    // public List<Usuari> getUsuariosVaga(String nome) {
-    //     return usuarioRepository.getUsuariosVaga(nome);
-    // }
+
+    @Override
+    public List<Usuario> getUsuariosVaga(String nome) {
+        return ((UsuarioService) usuarioRepository).getUsuariosVaga(nome);
+    }
 }
