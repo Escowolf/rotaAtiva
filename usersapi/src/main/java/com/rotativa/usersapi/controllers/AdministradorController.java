@@ -5,8 +5,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import com.rotativa.usersapi.model.AdministradorModel;
+import com.rotativa.usersapi.model.Administrador;
+import com.rotativa.usersapi.model.Usuario;
 import com.rotativa.usersapi.repository.AdministradorRepository;
+import com.rotativa.usersapi.repository.UsuarioRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,11 +19,39 @@ import java.util.Optional;
 public class AdministradorController {
 
     private final AdministradorRepository repository;
+    private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder encoder;
 
-    public AdministradorController(AdministradorRepository repository, PasswordEncoder encoder) {
+    public AdministradorController(AdministradorRepository repository, PasswordEncoder encoder,UsuarioRepository usuarioRepository) {
         this.repository = repository;
         this.encoder = encoder;
+        this.usuarioRepository = usuarioRepository;
+    }
+
+    @PostMapping("/editar")
+    public void update(@RequestBody Administrador administrador) {
+
+        repository.findById(administrador.getId())
+                .map(existingUsuario -> {
+                    if (administrador.getCpf() != null) {
+                        existingUsuario.setCpf(administrador.getCpf());
+                    }
+                    if (administrador.getNome() != null) {
+                        existingUsuario.setNome(administrador.getNome());
+                    }
+                    if (administrador.getEmail() != null) {
+                        existingUsuario.setEmail(administrador.getEmail());
+                    }
+                    if (administrador.getPassword() != null) {
+                        existingUsuario.setPassword(administrador.getPassword());
+                    }
+                    if (administrador.getNascimento() != null) {
+                        existingUsuario.setNascimento(administrador.getNascimento());
+                    }
+                    return existingUsuario;
+                })
+                .map(repository::save);
+
     }
 
     @PostMapping("/editar")
@@ -51,12 +81,18 @@ public class AdministradorController {
     }
 
     @GetMapping("/listarTodos")
-    public ResponseEntity<List<AdministradorModel>> listarTodos() {
+    public ResponseEntity<List<Administrador>> listarTodos() {
         return ResponseEntity.ok(repository.findAll());
     }
 
-    @PostMapping("/cadastrar")
-    public ResponseEntity<AdministradorModel> salvar(@RequestBody AdministradorModel administrador) {
+    @PostMapping("/auth/user/cadastrar")
+    public ResponseEntity<Usuario> salvar(@RequestBody Usuario usuario) {
+        usuario.setPassword(encoder.encode(usuario.getPassword()));
+        return ResponseEntity.ok(usuarioRepository.save(usuario));
+    }
+
+    @PostMapping("/auth/admin/cadastrar")
+    public ResponseEntity<Administrador> salvar(@RequestBody Administrador administrador) {
         administrador.setPassword(encoder.encode(administrador.getPassword()));
         return ResponseEntity.ok(repository.save(administrador));
     }
@@ -65,12 +101,12 @@ public class AdministradorController {
     public ResponseEntity<Boolean> validarSenha(@RequestParam String email,
             @RequestParam String password) {
 
-        Optional<AdministradorModel> optAdministrador = repository.findByEmail(email);
+        Optional<Administrador> optAdministrador = repository.findByEmail(email);
         if (optAdministrador.isEmpty()) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(false);
         }
 
-        AdministradorModel administrador = optAdministrador.get();
+        Administrador administrador = optAdministrador.get();
         boolean valid = encoder.matches(password, administrador.getPassword());
 
         HttpStatus status = (valid) ? HttpStatus.OK : HttpStatus.UNAUTHORIZED;

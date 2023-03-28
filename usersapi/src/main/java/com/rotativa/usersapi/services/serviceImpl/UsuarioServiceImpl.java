@@ -48,8 +48,8 @@ public class UsuarioServiceImpl implements UsuarioService {
                 if (usuario.getEmail() != null) {
                     existingUsuario.setEmail(usuario.getEmail());
                 }
-                if (usuario.getSenha() != null) {
-                    existingUsuario.setSenha(usuario.getSenha());
+                if (usuario.getPassword() != null) {
+                    existingUsuario.setPassword(usuario.getPassword());
                 }
                 if (usuario.getNascimento() != null) {
                     existingUsuario.setNascimento(usuario.getNascimento());

@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import com.rotativa.usersapi.data.DetalheAdministradorData;
-import com.rotativa.usersapi.model.AdministradorModel;
+import com.rotativa.usersapi.model.Administrador;
 import com.rotativa.usersapi.repository.AdministradorRepository;
 
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class DetalheAdminServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        Optional<AdministradorModel> administrador = repository.findByEmail(email);
+        Optional<Administrador> administrador = repository.findByEmail(email);
         if (administrador.isEmpty()) {
             throw new UsernameNotFoundException("Usuário [" + email + "] não encontrado");
         }
