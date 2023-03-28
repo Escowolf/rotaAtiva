@@ -6,7 +6,7 @@ import { Navigate, Outlet,  } from "react-router-dom";
 }
 
 export function Home() {
-  var id = localStorage.getItem("usuarioLogado");
+  var id = localStorage.getItem("token");
 
   return (
     <>

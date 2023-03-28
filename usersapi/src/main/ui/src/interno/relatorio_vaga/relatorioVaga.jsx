@@ -83,17 +83,9 @@ export function RelatorioVagas() {
             </thead>
             <tbody>
               {currentTableData.map((item) => {
-                var tempo = 0;
-                var credito = 0;
-                var veiculos = 0;
-                item.usuarios.forEach((element) => {
-                  tempo += element.tempo_uso;
-                  credito += element.credito;
-                  veiculos += element.veiculo.length;
-                });
                 return (
                   <tr>
-                    <td>{item.nome_vaga}</td>
+                    <td>{item.nome}</td>
                     <td>
                       <Link
                         to={{
@@ -101,12 +93,12 @@ export function RelatorioVagas() {
                         }}
                         state={{ vaga: item }}
                       >
-                        {item.rua_avenida} - {item.Bairro}
+                        {item.logradouro} - {item.bairro}
                       </Link>
                     </td>
-                    <td>{credito}</td>
-                    <td>{veiculos}</td>
-                    <td>{tempo} h</td>
+                    <td>{(item.credito == null || item.credito == undefined)  ? 0 : item.credito}</td>
+                    <td>{(item.totalVeiculos == null || item.totalVeiculos == undefined) ? 0 : item.totalVeiculos}</td>
+                    <td>{(item.tempoUso == null|| item.tempoUso == undefined) ? 0 : item.tempoUso} h</td>
                   </tr>
                 );
               })}

@@ -15,6 +15,7 @@ export function NavbarLateral() {
 
   useEffect(() => {
     userService.getUsuario().then((resp) => {
+      console.log(resp)
       let id = localStorage.getItem("usuarioLogado")
       let login = resp.data.find((p) => p.id == id);
       if (login) {

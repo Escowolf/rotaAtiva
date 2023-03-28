@@ -7,14 +7,18 @@ import UserService from "../../service/users";
 import { Cabecalho } from "../cabecalho/cabecalho";
 import { login } from "../../service/autenticacao";
 import API from "../../service/api";
+import AdmService from "../../service/adm";
+import Alert from '@mui/material/Alert';
+import { Collapse } from "@mui/material";
 
 export function Login() {
+  const admService = new AdmService();
   const userService = new UserService();
 
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [senha, setSenha] = useState();
-
+  const [alert, setAlert] = useState(false);
   const dados = [
     {
       campo: email,
@@ -29,34 +33,27 @@ export function Login() {
   function logar(e) {
     e.preventDefault();
 
-    // login.then((resp) => {
-    //   API.defaults.headers.authorization = `Bearer ${resp.token}`
-    //   localStorage.setItem("Token", JSON.stringify(resp.token));
-    //   localStorage.setItem("usuarioLogado", JSON.stringify(resp.id));
-    //   navigate(`/menulogado/${resp.id}`, { replace: true });
-    // })
-    
-    userService.getUsuario().then((resp) => {
-      let login = resp.data.find((p) => p.email == email && p.senha == senha);
-      if (login) {
-        console.log(resp)
-        API.defaults.headers.authorization = `Bearer ${resp.token}`
-        localStorage.setItem("Token", JSON.stringify(login.token));
+    const user = {
+      email: email,
+      password: senha
+    }
+  
+    admService.login(user).then((resp) => {
+      console.log(resp)
+      API.defaults.headers.authorization = `Bearer ${resp.data}`
+      localStorage.setItem("token", JSON.stringify(resp.data));
+      userService.getUsuario().then((resp)=>{
+        let login = resp.data.find((p) => p.email == email);
+        if (login) {
         localStorage.setItem("usuarioLogado", JSON.stringify(login.id));
-        JSON.parse(localStorage.getItem("usuarioLogado"));
         navigate(`/menulogado/${login.id}`, { replace: true });
       }
+      })
+    }).catch(function(error){
+      if(error.response){
+        setAlert(true)
+      }
     })
-
-    // userService.getUsuario().then((resp) => {
-    //   let login = resp.data.find((p) => p.email == email && p.senha == senha);
-    //   if (login) {
-    //     console.log(login);
-    //     localStorage.setItem("usuarioLogado", JSON.stringify(login.id));
-    //     JSON.parse(localStorage.getItem("usuarioLogado"));
-    //     navigate(`/menulogado/${login.id}`, { replace: true });
-    //   }
-    // });
   }
 
   return (
@@ -65,7 +62,9 @@ export function Login() {
       <section className="login">
         <div className="container login_caixa">
           <h3>Inicie sua sessão</h3>
-
+          <Collapse in={alert}>
+            <Alert severity="error" onClose={() => {setAlert(false)}}>Email/senha incorreta, tente novamente!</Alert>
+          </Collapse>
           <form onSubmit={logar} className="login_formulario">
             {log().map((item) => {
               return (

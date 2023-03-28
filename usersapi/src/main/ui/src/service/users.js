@@ -2,16 +2,18 @@ import API from './api';
 
 export default class UserService{
 
-    getUser(){
-        return API.get("/user");
+    getUserVaga(nome){
+        return API.get(`/usuario/relatorioVaga/?nome=${nome}`);
     }
 
     getUsuario(){
-        return API.get("/usuario");
+        return API.get("/administradores/listarTodos");
     }
 
     putUsuario(id, usuario){
-        return API.put(`/usuario/${id}`, usuario);
+        return API.post(`/usuario`, usuario);
     }
+
+    // relatorioVaga
 
 }

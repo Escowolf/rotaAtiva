@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 // import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,11 +45,11 @@ public class UsuarioController {
     //     return usuarios;
     // }
 
-    // @GetMapping("/relatorioVaga")
-    // List<Usuari> relatorioUsuario(@RequestParam("nome") String nome) {
-    //     List<Usuari> filtro = usersService.getUsuariosVaga(nome);
-    //     return filtro;
-    // }
+    @GetMapping("/relatorioVaga")
+    List<Usuario> relatorioUsuario(@RequestParam("nome") String nome) {
+        List<Usuario> filtro = usersService.getUsuariosVaga(nome);
+        return filtro;
+    }
 
 
 

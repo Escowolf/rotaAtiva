@@ -1,11 +1,14 @@
+import { Alert, Collapse } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import AdmService from '../../service/adm';
 import UserService from '../../service/users';
 import './edita_perfil.css'
 
 
 export function EditaPerfil() {
     const userService = new UserService();
+    const admService = new AdmService();
     const [usuario, setUsuario] = useState({
         nome:""
     });
@@ -13,6 +16,8 @@ export function EditaPerfil() {
     const [email, setEmail] = useState("");
     const [cpf, setCpf] = useState("");
     const [datanasc, setDatanasc] = useState("");
+    const [alert, setAlert] = useState(false);
+    const [alertOk, setAlertOK] = useState(false);
 
     const dados = [
         {
@@ -39,20 +44,26 @@ export function EditaPerfil() {
         userService.getUsuario().then((resp) => {
             let id = localStorage.getItem("usuarioLogado")
             let login = resp.data.find((p) => p.id == id);
+            console.log(login)
             if (login) {
                 setUsuario(login)
                 setNome(login.nome)
                 setEmail(login.email);
                 setCpf(login.cpf);
-                setDatanasc(login.datanasc);
+                setDatanasc(login.nascimento);
             }
+            
         })
     }, [])
 
     function salvar(e) {
         e.preventDefault();
-        let id = localStorage.getItem("usuarioLogado");
-        userService.putUsuario(id, {...usuario, nome, cpf, email, datanasc}).then(alert("cadastrado com sucesso"));
+        admService.editar({...usuario, nome, cpf, email, datanasc}).then(()=>{setAlertOK(true); setAlert(false);}).catch(function(error){
+            if(error.response){
+              setAlert(true);
+              setAlertOK(false);
+            }
+          });
     }
 
     return (
@@ -69,7 +80,12 @@ export function EditaPerfil() {
 
                     </div>
                 </div>
-
+                <Collapse in={alert}>
+                    <Alert severity="error" onClose={() => {setAlert(false)}}>Ocorreu um erro, tente novamente, mais tarde!</Alert>
+                </Collapse>
+                <Collapse in={alertOk}>
+                    <Alert onClose={() => {setAlertOK(false)}}>Cadastro realizado com sucesso!</Alert>
+                </Collapse>
                 <form className="p-3 edita_perfil" onSubmit={salvar}>
 
                     {infos.map((info, index) => {

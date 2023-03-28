@@ -1,4 +1,5 @@
 package com.rotativa.usersapi.security;
+import java.util.Arrays;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -32,7 +33,7 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests()
+        http.cors().and().csrf().disable().authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .antMatchers(HttpMethod.POST, "/auth/admin/*").hasAnyAuthority("ADMIN")
                 .antMatchers(HttpMethod.POST, "/administradores/auth/user/*").permitAll()
@@ -48,6 +49,7 @@ public class JWTConfiguracao extends WebSecurityConfigurerAdapter {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 
         CorsConfiguration corsConfiguration = new CorsConfiguration().applyPermitDefaultValues();
+        corsConfiguration.setAllowedMethods(Arrays.asList("GET","POST","DELETE"));
         source.registerCorsConfiguration("/**", corsConfiguration);
         return source;
     }

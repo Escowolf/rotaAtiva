@@ -10,13 +10,20 @@ import Pagination from "../../components/Paginacao/Pagination";
 import "./relatorioUsuario.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import AreasService from "../../service/areas";
+import UserService from "../../service/users";
 
 let PageSize = 5;
 
 export function RelatorioUsuario() {
-  const [y, setY] = useState({ path: ["", ""] });
+  const [y, setY] = useState({
+    latitudeInicial: "",
+    latitudeFinal: "",
+    longitudeInicial: "",
+    longitudeFinal: ""
+  });
   const location = useLocation();
   const navigate = useNavigate();
+  const userService = new UserService();
   const areasService = new AreasService();
 
   const [usuarios, setUsuarios] = useState([]);
@@ -38,14 +45,23 @@ export function RelatorioUsuario() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    setUsuarios(location.state.vaga.usuarios);
-    setLista(location.state.vaga.usuarios);
+    setY({
+      latitudeInicial: location.state.vaga.latitudeInicial,
+      latitudeFinal: location.state.vaga.latitudeFinal,
+      longitudeInicial: location.state.vaga.longitudeInicial,
+      longitudeFinal: location.state.vaga.longitudeFinal
+    })
+    userService.getUserVaga(location.state.vaga.nome).then((resp) => {
+      console.log(resp.data)
+      setUsuarios(resp.data);
+      setLista(resp.data);
+    })
   }, []);
 
   useEffect(() => {
     areasService.getAreas().then((resp) => {
       setY(
-        resp.data.find((p) => p.rua_avenida == location.state.vaga.rua_avenida)
+        resp.data.find((p) => p.logradouro == location.state.vaga.logradouro)
       );
     });
   }, []);
@@ -57,7 +73,7 @@ export function RelatorioUsuario() {
   }, [currentPage, lista]);
 
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyAQYGeShstIRAbsrS4lwyumbLwlG5t-sTA",
+    googleMapsApiKey: "AIzaSyB9z2S91_vb2LQS6VBMm3L0oJhemvEyLlk",
     libraries: ["places"],
   });
 
@@ -70,7 +86,7 @@ export function RelatorioUsuario() {
       <Flex h="30vh" className="margem-esq">
         <Box h="100%" w="100%">
           <GoogleMap
-            center={y.path[0]}
+            center={{ lat: y.latitudeInicial, lng: y.longitudeInicial }}
             zoom={16}
             mapContainerStyle={{ width: "100%", height: "100%" }}
           >
@@ -79,7 +95,7 @@ export function RelatorioUsuario() {
               onClick={() => {
                 console.log(location);
               }}
-              paths={y.path}
+              paths={[{ lat: y.latitudeInicial, lng: y.longitudeInicial }, { lat: y.latitudeFinal, lng: y.longitudeFinal }]}
             ></Polygon>
           </GoogleMap>
         </Box>
@@ -98,12 +114,12 @@ export function RelatorioUsuario() {
           <div className="row">
             <div className="col-md-12">
               <h2>
-                Endereço: {location.state.vaga.rua_avenida} -{" "}
-                {location.state.vaga.Bairro}
+                Endereço: {location.state.vaga.logradouro} -{" "}
+                {location.state.vaga.bairro}
               </h2>
               <h2>
                 Regra:
-                {location.state.vaga.hora == undefined
+                {/* {location.state.vaga.hora == undefined
                   ? ""
                   : ` ${location.state.vaga.hora} - `}
                 {location.state.vaga.tipoVaga == undefined
@@ -111,7 +127,7 @@ export function RelatorioUsuario() {
                   : `${location.state.vaga.tipoVaga} - `}
                 {location.state.vaga.tempo == undefined
                   ? ""
-                  : `${location.state.vaga.tempo}`}
+                  : `${location.state.vaga.tempo}`} */}
               </h2>
               <h3 className="py-3 text-center font-bold font-up blue-text">
                 Relatorio de Usuarios
@@ -144,7 +160,7 @@ export function RelatorioUsuario() {
               <tr>
                 <th>#</th>
                 <th>Nome</th>
-                <th>Tempo de Uso</th>
+                {/* <th>Tempo de Uso</th> */}
                 <th>Veiculo</th>
                 <th>Acessibilidade</th>
               </tr>
@@ -162,10 +178,10 @@ export function RelatorioUsuario() {
                         {item.nome}
                       </Link>
                     </td>
-                    <td>{item.tempo_uso}</td>
+                    {/* <td>{item.tempo_uso}</td> */}
                     <td>
-                      {item.veiculo[0].modelo.toUpperCase()}{" "}
-                      {item.veiculo[0].placa}
+                      {item.veiculos[0].modelo.toUpperCase()}{" "}
+                      {item.veiculos[0].placa}
                     </td>
                     <td>{item.acessibilidade ? "Sim" : "Não"}</td>
                   </tr>

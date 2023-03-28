@@ -44,19 +44,19 @@ public class Usuario implements Serializable {
     @Column(name = "estado")
     private Boolean estado;
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany(mappedBy = "usuario",  cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonIgnoreProperties(value = { "usuario", "tipoPagamento" }, allowSetters = true)
     private Set<Pagamento> pagamentos = new HashSet<>();
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany(mappedBy = "usuario",  cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonIgnoreProperties(value = { "usuario" }, allowSetters = true)
     private Set<Telefone> telefones = new HashSet<>();
 
-    @OneToMany(mappedBy = "usuario")
+    @OneToMany(mappedBy = "usuario",  cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonIgnoreProperties(value = { "usuario" }, allowSetters = true)
     private Set<Transacao> transacoes = new HashSet<>();
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
         name = "rel_usuario__veiculos",
         joinColumns = @JoinColumn(name = "usuario_id"),

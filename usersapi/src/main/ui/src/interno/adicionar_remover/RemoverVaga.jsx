@@ -4,6 +4,7 @@ import VagaService from "../../service/vaga";
 import Pagination from "../../components/Paginacao/Pagination";
 import { Link } from "react-router-dom";
 import AreasService from "../../service/areas";
+import { Alert, Collapse } from "@mui/material";
 
 let PageSize = 6;
 
@@ -17,6 +18,9 @@ export function RemoverVaga() {
   const [vagas, setVagas] = useState([]);
 
   const [lista, setLista] = useState([]);
+
+  const [alert, setAlert] = useState(false);
+  const [alertOk, setAlertOK] = useState(false);
 
   function testaBusca(nome) {
     const regex = new RegExp(buscar, "i");
@@ -34,14 +38,19 @@ export function RemoverVaga() {
 
   useEffect(() => {
     vagaService.getVaga().then((resp) => {
+      console.log(resp)
       setVagas(resp.data);
       setLista(resp.data);
     });
   }, []);
 
   function excluir(id) {
-    vagaService.deleteVaga(id);
-    areasService.deleteAreas(id).then(alert("excluido com sucesso"));
+    vagaService.deleteVaga(id).then(()=>{setAlertOK(true); setAlert(false);}).catch(function(error){
+      if(error.response){
+        setAlert(true)
+        setAlertOK(false)
+      }
+    });;
   }
 
   const currentTableData = useMemo(() => {
@@ -87,7 +96,12 @@ export function RemoverVaga() {
                   </a>
                 </span>
               </div>
-
+              <Collapse in={alert}>
+                  <Alert severity="error" onClose={() => {setAlert(false)}}>Ocorreu um erro, tente novamente, mais tarde!</Alert>
+              </Collapse>
+              <Collapse in={alertOk}>
+                  <Alert onClose={() => {setAlertOK(false)}}>Cadastro realizado com sucesso!</Alert>
+              </Collapse>
               <table className="table table-hover table-responsive mb-0">
                 <thead>
                   <tr>
@@ -101,17 +115,9 @@ export function RemoverVaga() {
                 </thead>
                 <tbody>
                   {currentTableData.map((item) => {
-                    var tempo = 0;
-                    var credito = 0;
-                    var veiculos = 0;
-                    item.usuarios.forEach((element) => {
-                      tempo += element.tempo_uso;
-                      credito += element.credito;
-                      veiculos += element.veiculo.length;
-                    });
                     return (
                       <tr>
-                        <td>{item.nome_vaga}</td>
+                        <td>{item.nome}</td>
                         <td>
                           <Link
                             to={{
@@ -119,12 +125,12 @@ export function RemoverVaga() {
                             }}
                             state={{ vaga: item }}
                           >
-                            {item.rua_avenida} - {item.Bairro}
+                            {item.logradouro} - {item.bairro}
                           </Link>
                         </td>
-                        <td>{credito}</td>
-                        <td>{veiculos}</td>
-                        <td>{tempo} h</td>
+                        <td>{(item.credito == null || item.credito == undefined)  ? 0 : item.credito}</td>
+                        <td>{(item.totalVeiculos == null || item.totalVeiculos == undefined) ? 0 : item.totalVeiculos}</td>
+                        <td>{(item.tempoUso == null|| item.tempoUso == undefined) ? 0 : item.tempoUso} h</td>
                         <td
                           className="remover"
                           onClick={() => excluir(item.id)}

@@ -36,13 +36,13 @@ export function RelatorioDeUso() {
 
   useEffect(() => {
     const novaLista = vagas.filter(
-      (item) => testaBusca(item.rua_avenida) || testaBusca(item.Bairro)
+      (item) => testaBusca(item.logradouro) || testaBusca(item.bairro)
     );
     setLista(novaLista);
   }, [buscar]);
 
   useEffect(() => {
-    areasService.getAreas().then((resp) => {
+    vagaService.getVaga().then((resp) => {
       setDados(resp.data);
     });
   }, []);
@@ -63,7 +63,7 @@ export function RelatorioDeUso() {
   }, [currentPage, lista]);
 
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyAQYGeShstIRAbsrS4lwyumbLwlG5t-sTA",
+    googleMapsApiKey: "AIzaSyB9z2S91_vb2LQS6VBMm3L0oJhemvEyLlk",
     libraries: ["places"],
   });
 
@@ -84,14 +84,14 @@ export function RelatorioDeUso() {
               mapContainerStyle={{ width: "100%", height: "100%" }}
             >
               {dados.map((d) => {
-                var x = vagas.find((p) => p.rua_avenida == d.rua_avenida);
+                var x = vagas.find((p) => p.logradouro == d.logradouro);
 
                 return (
                   <>
                     <Polygon
                       options={{
                         strokeColor:
-                          x?.usuarios?.length > 2 ? "#FF5858" : "#027373",
+                          x?.totalVeiculos > 2 ? "#FF5858" : "#027373",
                         strokeWeight: 2,
                       }}
                       onClick={() => {
@@ -100,7 +100,7 @@ export function RelatorioDeUso() {
                           replace: true,
                         });
                       }}
-                      paths={d.path}
+                      paths={[{ lat: d.latitudeInicial, lng: d.longitudeInicial }, { lat: d.latitudeFinal, lng: d.longitudeFinal }]}
                     ></Polygon>
                   </>
                 );
@@ -145,7 +145,7 @@ export function RelatorioDeUso() {
               <thead>
                 <tr>
                   <th scope="row">Nome</th>
-                  <th className="th-lg">Rua/Avenida - Bairro</th>
+                  <th className="th-lg">Logradouro - Bairro</th>
                   <th className="th-lg">Crédito</th>
                   <th className="th-lg">Total do veículos</th>
                   <th className="th-lg">Tempo de uso</th>
@@ -153,17 +153,9 @@ export function RelatorioDeUso() {
               </thead>
               <tbody>
                 {currentTableData.map((item) => {
-                  var tempo = 0;
-                  var credito = 0;
-                  var veiculos = 0;
-                  item.usuarios.forEach((element) => {
-                    tempo += element.tempo_uso;
-                    credito += element.credito;
-                    veiculos += element.veiculo.length;
-                  });
                   return (
                     <tr>
-                      <td>{item.nome_vaga}</td>
+                      <td>{item.nome}</td>
                       <td>
                         <Link
                           to={{
@@ -171,12 +163,12 @@ export function RelatorioDeUso() {
                           }}
                           state={{ vaga: item }}
                         >
-                          {item.rua_avenida} - {item.Bairro}
+                          {item.logradouro} - {item.bairro}
                         </Link>
                       </td>
-                      <td>{credito}</td>
-                      <td>{veiculos}</td>
-                      <td>{tempo} h</td>
+                      <td>{(item.credito == null || item.credito == undefined)  ? 0 : item.credito}</td>
+                      <td>{(item.totalVeiculos == null || item.totalVeiculos == undefined) ? 0 : item.totalVeiculos}</td>
+                      <td>{(item.tempoUso == null|| item.tempoUso == undefined) ? 0 : item.tempoUso} h</td>
                     </tr>
                   );
                 })}

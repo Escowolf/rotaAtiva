@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^1.8.6",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.16",
     "@react-google-maps/api": "^2.12.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -16,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "recharts": "^2.1.16",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

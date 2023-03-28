@@ -1,3 +1,4 @@
+import { Alert, Collapse } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import AreasService from "../../service/areas";
@@ -18,39 +19,26 @@ export function EditarVaga() {
   const [tempo, setTempo] = useState("");
   const [tipoVaga, setTipoVaga] = useState("");
   const [hora, setHora] = useState("");
+  const [alert, setAlert] = useState(false);
+  const [alertOk, setAlertOK] = useState(false);
 
   function salvar(e) {
     e.preventDefault();
     vagaService.postVaga({
-      nome_vaga: nome,
-      rua_avenida: rua,
-      Bairro: bairro,
-      usuarios: [],
-      tipoVaga: tipoVaga,
-      hora: hora,
-      tempo: tempo,
+      nome: nome,
+      logradouro: rua,
+      bairro: bairro,
+      acessibilidade: tipoVaga,
+      latitudeInicial:  Number(lat),
+      longitudeInicial: Number(lng),
+      latitudeFinal: Number(lat2),
+      longitudeFinal:  Number(lng2)
+    }).then(()=>{setAlertOK(true); setAlert(false);}).catch(function(error){
+      if(error.response){
+        setAlert(true)
+        setAlertOK(false)
+      }
     });
-
-    areasService
-      .postAreas({
-        nome_vaga: nome,
-        rua_avenida: rua,
-        Bairro: bairro,
-        tipoVaga: tipoVaga,
-        hora: hora,
-        tempo: tempo,
-        path: [
-          {
-            lat: Number(lat),
-            lng: Number(lng),
-          },
-          {
-            lat: Number(lat2),
-            lng: Number(lng2),
-          },
-        ],
-      })
-      .then(alert("cadastrado com sucesso"));
   }
 
   return (
@@ -68,6 +56,12 @@ export function EditarVaga() {
           </div>
           <form className="adicionar_form" onSubmit={salvar}>
             <label className="adicionar_titulo">Vaga</label>
+          <Collapse in={alert}>
+              <Alert severity="error" onClose={() => {setAlert(false)}}>Ocorreu um erro, tente novamente, mais tarde!</Alert>
+          </Collapse>
+          <Collapse in={alertOk}>
+              <Alert onClose={() => {setAlertOK(false)}}>Cadastro realizado com sucesso!</Alert>
+          </Collapse>
             {/* Cadastro de Vaga */}
             <fieldset className="adicionar_corpo">
               <input
@@ -145,7 +139,7 @@ export function EditarVaga() {
             </fieldset>
             <fieldset className="adicionar_corpo">
               <select
-                onChange={(e) => setTipoVaga(e.target.value)}
+                onChange={(e) => setTipoVaga(e.target.value == "comum" ? false : true)}
                 value={tipoVaga}
                 className="tipodevaga"
                 name="tipodevaga"
@@ -156,7 +150,7 @@ export function EditarVaga() {
                 <option value="prioritario">Prioritário</option>
               </select>
             </fieldset>
-            <fieldset className="adicionar_corpo">
+            {/* <fieldset className="adicionar_corpo">
               <input
                 onChange={(e) => setHora(e.target.value)}
                 value={hora}
@@ -178,7 +172,7 @@ export function EditarVaga() {
                 <option value="2 Horas">2 Horas - Ticket</option>
                 <option value="5 Horas">5 Horas - Ticket</option>
               </select>
-            </fieldset>
+            </fieldset> */}
             <button class="botao_enviar">Cadastrar</button>
           </form>
         </div>
