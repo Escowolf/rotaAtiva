@@ -11,9 +11,9 @@ import java.util.List;
 @Repository
 public interface TransacaoRepository extends JpaRepository<Transacao, Long> {
 
-    // @Query(value = "FROM Transacao t WHERE t.vaga.nome = :nome")
-    // List<Transacao> getTransacoes(@Param("nome") String nome);
-@Query(value = "FROM Transacao t WHERE t.vaga.id = :id")
-    List<Transacao> getTransacoes(@Param("id") Long id);
+  // @Query(value = "FROM Transacao t WHERE t.vaga.nome = :nome")
+  // List<Transacao> getTransacoes(@Param("nome") String nome);
+  @Query(value = "FROM Transacao t WHERE t.usuario.id = :id")
+  List<Transacao> getTransacoes(@Param("id") Long id);
 
 }
