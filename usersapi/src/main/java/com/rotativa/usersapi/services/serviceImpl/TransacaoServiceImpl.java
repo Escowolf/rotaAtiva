@@ -67,8 +67,13 @@ public class TransacaoServiceImpl implements TransacaoService {
         transacaoRepository.deleteById(id);
     }
 
-    @Override
-    public List<Transacao> getTransacoes(String nome) {
-        return transacaoRepository.getTransacoes(nome);
+    // @Override
+    // public List<Transacao> getTransacoes(String nome) {
+    //     return transacaoRepository.getTransacoes(nome);
+    // }
+
+     @Override
+    public List<Transacao> getTransacoes(Long id) {
+        return transacaoRepository.getTransacoes(id);
     }
 }

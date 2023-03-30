@@ -6,7 +6,8 @@ import com.rotativa.usersapi.model.Transacao;
 
 public interface TransacaoService {
 
-    List<Transacao> getTransacoes(String nome);    
+    // List<Transacao> getTransacoes(String nome);    
+    List<Transacao> getTransacoes(Long id);    
 
     Transacao save(Transacao transacao);
 

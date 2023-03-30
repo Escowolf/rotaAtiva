@@ -27,9 +27,14 @@ public class TransacaoController {
         return transacaoService.findAll();
     }
 
-    @GetMapping("/usuarios")
-    public List<Transacao> getTransacao(@RequestParam("nome") String nome){
-        return transacaoService.getTransacoes(nome);
+    // @GetMapping("/usuarios")
+    // public List<Transacao> getTransacao(@RequestParam("nome") String nome){
+    //     return transacaoService.getTransacoes(nome);
+    // }
+
+     @GetMapping("/usuario/")
+    public List<Transacao> getTransacao(@RequestParam("id") Long id){
+        return transacaoService.getTransacoes(id);
     }
 
     @PostMapping
