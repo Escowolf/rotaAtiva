@@ -15,36 +15,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "http://localhost:3000") //Permite que o back envie e receba dados de uma origem diferente
+@CrossOrigin(origins = "http://localhost:3000") // Permite que o back envie e receba dados de uma origem diferente
 @RestController
 @RequestMapping("/transacao")
 public class TransacaoController {
-    @Autowired //o spring cria o objeto, injeta no atributo repositório
-	TransacaoService transacaoService;
+  @Autowired // o spring cria o objeto, injeta no atributo repositório
+  TransacaoService transacaoService;
 
-    @GetMapping
-    public List<Transacao> listar(){
-        return transacaoService.findAll();
-    }
+  @GetMapping
+  public List<Transacao> listar() {
+    return transacaoService.findAll();
+  }
 
-    // @GetMapping("/usuarios")
-    // public List<Transacao> getTransacao(@RequestParam("nome") String nome){
-    //     return transacaoService.getTransacoes(nome);
-    // }
+  // @GetMapping("/usuarios")
+  // public List<Transacao> getTransacao(@RequestParam("nome") String nome){
+  // return transacaoService.getTransacoes(nome);
+  // }
 
-     @GetMapping("/usuario/")
-    public List<Transacao> getTransacao(@RequestParam("id") Long id){
-        return transacaoService.getTransacoes(id);
-    }
+  @GetMapping("/auth/user/")
+  public List<Transacao> getTransacao(@RequestParam("id") Long id) {
+    return transacaoService.getTransacoes(id);
+  }
 
-    @PostMapping
-    public void salvar(@RequestBody Transacao transacao){
-        transacaoService.save(transacao);
-    }
+  @PostMapping
+  public void salvar(@RequestBody Transacao transacao) {
+    transacaoService.save(transacao);
+  }
 
-    @PutMapping
-    public void alterar(@RequestBody Transacao transacao){
-        transacaoService.update(transacao);
-    }
+  @PutMapping
+  public void alterar(@RequestBody Transacao transacao) {
+    transacaoService.update(transacao);
+  }
 
 }
