@@ -7,7 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
-public class UsersapiApplication {
+public class UsersapiApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(UsersapiApplication.class, args);

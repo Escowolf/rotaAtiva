@@ -28,57 +28,57 @@ public class AdministradorController {
         this.usuarioRepository = usuarioRepository;
     }
 
-    @PostMapping("/editar")
-    public void update(@RequestBody Administrador administrador) {
+    // @PostMapping("/editar")
+    // public void update(@RequestBody Administrador administrador) {
 
-        repository.findById(administrador.getId())
-                .map(existingUsuario -> {
-                    if (administrador.getCpf() != null) {
-                        existingUsuario.setCpf(administrador.getCpf());
-                    }
-                    if (administrador.getNome() != null) {
-                        existingUsuario.setNome(administrador.getNome());
-                    }
-                    if (administrador.getEmail() != null) {
-                        existingUsuario.setEmail(administrador.getEmail());
-                    }
-                    if (administrador.getPassword() != null) {
-                        existingUsuario.setPassword(administrador.getPassword());
-                    }
-                    if (administrador.getNascimento() != null) {
-                        existingUsuario.setNascimento(administrador.getNascimento());
-                    }
-                    return existingUsuario;
-                })
-                .map(repository::save);
+    //     repository.findById(administrador.getId())
+    //             .map(existingUsuario -> {
+    //                 if (administrador.getCpf() != null) {
+    //                     existingUsuario.setCpf(administrador.getCpf());
+    //                 }
+    //                 if (administrador.getNome() != null) {
+    //                     existingUsuario.setNome(administrador.getNome());
+    //                 }
+    //                 if (administrador.getEmail() != null) {
+    //                     existingUsuario.setEmail(administrador.getEmail());
+    //                 }
+    //                 if (administrador.getPassword() != null) {
+    //                     existingUsuario.setPassword(administrador.getPassword());
+    //                 }
+    //                 if (administrador.getNascimento() != null) {
+    //                     existingUsuario.setNascimento(administrador.getNascimento());
+    //                 }
+    //                 return existingUsuario;
+    //             })
+    //             .map(repository::save);
 
-    }
+    // }
 
-    @PostMapping("/editar")
-    public void update(@RequestBody AdministradorModel administrador) {
+    // @PostMapping("/editar")
+    // public void update(@RequestBody AdministradorModel administrador) {
 
-        repository.findById(administrador.getId())
-                .map(existingUsuario -> {
-                    if (administrador.getCpf() != null) {
-                        existingUsuario.setCpf(administrador.getCpf());
-                    }
-                    if (administrador.getNome() != null) {
-                        existingUsuario.setNome(administrador.getNome());
-                    }
-                    if (administrador.getEmail() != null) {
-                        existingUsuario.setEmail(administrador.getEmail());
-                    }
-                    if (administrador.getPassword() != null) {
-                        existingUsuario.setPassword(administrador.getPassword());
-                    }
-                    if (administrador.getNascimento() != null) {
-                        existingUsuario.setNascimento(administrador.getNascimento());
-                    }
-                    return existingUsuario;
-                })
-                .map(repository::save);
+    //     repository.findById(administrador.getId())
+    //             .map(existingUsuario -> {
+    //                 if (administrador.getCpf() != null) {
+    //                     existingUsuario.setCpf(administrador.getCpf());
+    //                 }
+    //                 if (administrador.getNome() != null) {
+    //                     existingUsuario.setNome(administrador.getNome());
+    //                 }
+    //                 if (administrador.getEmail() != null) {
+    //                     existingUsuario.setEmail(administrador.getEmail());
+    //                 }
+    //                 if (administrador.getPassword() != null) {
+    //                     existingUsuario.setPassword(administrador.getPassword());
+    //                 }
+    //                 if (administrador.getNascimento() != null) {
+    //                     existingUsuario.setNascimento(administrador.getNascimento());
+    //                 }
+    //                 return existingUsuario;
+    //             })
+    //             .map(repository::save);
 
-    }
+    // }
 
     @GetMapping("/listarTodos")
     public ResponseEntity<List<Administrador>> listarTodos() {
