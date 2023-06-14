@@ -15,6 +15,14 @@ public class Veiculo implements Serializable {
     @Column(name = "id")
     private Long id;
 
+    public Veiculo(Long id, String cor, String placa, String modelo) {
+        this.id = id;
+        this.cor = cor;
+        this.placa = placa;
+        this.modelo = modelo;
+    }
+    public Veiculo(){}
+
     @Column(name = "cor")
     private String cor;
 

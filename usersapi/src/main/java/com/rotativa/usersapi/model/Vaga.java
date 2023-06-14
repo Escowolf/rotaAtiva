@@ -15,6 +15,9 @@ public class Vaga implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     @Column(name = "id")
+
+    
+    
     private Long id;
 
     @Column(name = "logradouro")

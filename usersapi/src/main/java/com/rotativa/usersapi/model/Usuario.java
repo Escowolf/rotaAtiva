@@ -14,6 +14,26 @@ public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public Usuario(Long id, String cpf, String nome, Boolean acessibilidade, String email, String password,
+            LocalDate nascimento, Integer quantidadeTicket, Boolean estado/* , Set<Pagamento> pagamentos,
+            Set<Telefone> telefones, Set<Transacao> transacoes, Set<Veiculo> veiculos */) {
+        this.id = id;
+        this.cpf = cpf;
+        this.nome = nome;
+        this.acessibilidade = acessibilidade;
+        this.email = email;
+        this.password = password;
+        this.nascimento = nascimento;
+        this.quantidadeTicket = quantidadeTicket;
+        this.estado = estado;
+      /*   this.pagamentos = pagamentos;
+        this.telefones = telefones;
+        this.transacoes = transacoes;
+        this.veiculos = veiculos; */
+    }
+
+    public Usuario(){}
+
     @Id
     // @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     // @SequenceGenerator(name = "sequenceGenerator")
