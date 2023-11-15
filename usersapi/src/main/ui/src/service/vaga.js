@@ -2,11 +2,11 @@ import API from "./api";
 
 export default class VagaService {
   getVaga() {
-    return API.get("/vaga");
+    return API.get("/zona/auth/user/vagas");
   }
 
   postVaga(vaga) {
-    return API.post("/vaga", vaga);
+    return API.post("/zona/auth/user/save", vaga);
   }
 
   deleteVaga(id) {
