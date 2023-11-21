@@ -39,7 +39,7 @@ function App() {
           <Route element={<RemoverVaga/>} path="removerVaga"/>
         </Route>
       </Routes>
-      {useLocation().pathname == "/" ? <Rodape /> : ""}
+      {/* {useLocation().pathname == "/" ? <Rodape /> : ""} */}
     </>
   );
 }

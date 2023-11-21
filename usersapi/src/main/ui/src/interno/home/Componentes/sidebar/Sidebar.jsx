@@ -17,7 +17,7 @@ export function NavbarLateral() {
     userService.getUsuario().then((resp) => {
       console.log(resp)
       let id = localStorage.getItem("usuarioLogado")
-      let login = resp.data.find((p) => p.id == id);
+      let login = resp.data.find((p) => p.id === id);
       if (login) {
         setUsuario(login);
         console.log(login);

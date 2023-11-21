@@ -61,7 +61,7 @@ export function RelatorioUsuario() {
   useEffect(() => {
     areasService.getAreas().then((resp) => {
       setY(
-        resp.data.find((p) => p.logradouro == location.state.vaga.logradouro)
+        resp.data.find((p) => p.logradouro === location.state.vaga.logradouro)
       );
     });
   }, []);
