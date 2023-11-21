@@ -2,12 +2,10 @@ import './caixaFormulario.css'
 
 function CaixaFormularioLogin(props) {
     return (
+        <>
+        <label htmlFor={props.name}>{props.label}</label>
         <div className={props.class}>
-            <div  className="formulario_caixa-img">
-                <img src={props.img} alt="" />
-            </div>
             <div  className="formulario_caixa-dados indentacao">
-                <label htmlFor={props.name}>{props.label}</label>
                 <div>
                     <input
                         name={props.name}
@@ -20,7 +18,11 @@ function CaixaFormularioLogin(props) {
                     />
                 </div>
             </div>
+            <div  className="formulario_caixa-img">
+                <img src={props.img} alt="" />
+            </div>
         </div>
+        </>
     )
 }
 
