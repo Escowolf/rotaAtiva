@@ -1,7 +1,6 @@
 .cabecalho {
   background-color: var(--verde-escuro);
   height: 64px;
-  /* 13vh */
 }
 
 .cabecalho_logo {
@@ -18,14 +17,16 @@
   height: inherit;
 }
 
-.cabecalho_menu-item span {
+.cabecalho_menu-item span, ul {
+  align-items: center;
   display: inline-block;
   padding: 0.5rem;
+  margin:auto;
   color: var(--verde-claro);
+  font-weight: bold;
 }
 
 .cabecalho_menu-item a {
-  padding: 0.5rem 1rem;
   border-radius: 20px;
   text-decoration: none;
 }

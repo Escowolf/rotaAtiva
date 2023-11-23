@@ -24,8 +24,7 @@ export function Cabecalho() {
                             :
                             <li className='cabecalho_menu-item'>
                                 <Link to="/login">
-                                    <img src="/img/login.svg" alt="login" />
-                                    <span>Login</span>
+                                    <span>Contato</span>
                                 </Link>
                             </li>
                         }
