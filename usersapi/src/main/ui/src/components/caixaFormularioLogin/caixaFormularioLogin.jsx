@@ -5,8 +5,7 @@ function CaixaFormularioLogin(props) {
         <>
         <label htmlFor={props.name}>{props.label}</label>
         <div className={props.class}>
-            <div  className="formulario_caixa-dados indentacao">
-                <div>
+            <div  className="formulario_caixa-dados flex">
                     <input
                         name={props.name}
                         id={props.id}
@@ -16,10 +15,10 @@ function CaixaFormularioLogin(props) {
                         onChange={e => props.evento(e.target.value)}
                         value={props.campo}
                     />
-                </div>
-            </div>
+            
             <div  className="formulario_caixa-img">
                 <img src={props.img} alt="" />
+            </div>
             </div>
         </div>
         </>
