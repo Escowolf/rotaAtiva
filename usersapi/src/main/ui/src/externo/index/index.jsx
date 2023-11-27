@@ -61,11 +61,15 @@ export function Index() {
       <div className="flex">
         <div className="principal_lado_esq">
           <div className="principal_lado_esq_texto">
-            <h2>Encontre sua vaga aqui</h2>
+            <h2>Encontre sua</h2>
+            <h2>vaga aqui</h2>
             <p>
-              Faça parte do grupo de motoristas que nos aprovam como Aplicação
-              mais completa para quem deseja localizar zona azul em Fortaleza!
+            Faça parte do grupo de motoristas que nos aprovam
+como Aplicação mais completa para quem deseja
+localizar zona azul em Fortaleza!
             </p>
+            
+            <Link to="/cadastro" className="botao_alerta">Cadastre-se</Link>
           </div>
         </div>
         <div className="principal_lado_dir">
