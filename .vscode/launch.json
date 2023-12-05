@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UsersapiApplication",
+            "request": "launch",
+            "mainClass": "com.rotativa.usersapi.UsersapiApplication",
+            "projectName": "myartifactid"
+        },
+        {
+            "type": "java",
             "name": "Launch UsersapiApplication",
             "request": "launch",
             "mainClass": "com.rotativa.usersapi.UsersapiApplication",
