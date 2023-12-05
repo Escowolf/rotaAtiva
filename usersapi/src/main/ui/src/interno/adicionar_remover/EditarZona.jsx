@@ -5,7 +5,7 @@ import AreasService from "../../service/areas";
 import VagaService from "../../service/vaga";
 import "./editar_vaga/adicionar_remover.css";
 
-export function EditarVaga() {
+export function EditarZona() {
   const areasService = new AreasService();
   const vagaService = new VagaService();
 
@@ -44,25 +44,25 @@ export function EditarVaga() {
   return (
     <>
       <div id="wrapper">
-        <h1 className="tituloPag">Cadastro de Vaga</h1>
+        <h1 className="tituloPag">Cadastro de Zona</h1>
         <div class="adicionar">
           <div className="alternar">
-            <Link to="/menulogado/editarVaga">
+            <Link to="/menulogado/editarZona">
               <button className="alternar_cadastrar">Cadastrar</button>
             </Link>
-            <Link to="/menulogado/removerVaga">
+            <Link to="/menulogado/removerZona">
               <button className="alternar_remover">Remover</button>
             </Link>
           </div>
           <form className="adicionar_form" onSubmit={salvar}>
-            <label className="adicionar_titulo">Vaga</label>
+            <label className="adicionar_titulo">Zona</label>
           <Collapse in={alert}>
               <Alert severity="error" onClose={() => {setAlert(false)}}>Ocorreu um erro, tente novamente, mais tarde!</Alert>
           </Collapse>
           <Collapse in={alertOk}>
               <Alert onClose={() => {setAlertOK(false)}}>Cadastro realizado com sucesso!</Alert>
           </Collapse>
-            {/* Cadastro de Vaga */}
+            {/* Cadastro de Zona */}
             <fieldset className="adicionar_corpo">
               <input
                 onChange={(e) => setLng(e.target.value)}
@@ -145,7 +145,7 @@ export function EditarVaga() {
                 name="tipodevaga"
                 required
               >
-                <option value="selecione">Tipo de vaga</option>
+                <option value="selecione">Tipo de Zona</option>
                 <option value="comum">Comum</option>
                 <option value="prioritario">Prioritário</option>
               </select>

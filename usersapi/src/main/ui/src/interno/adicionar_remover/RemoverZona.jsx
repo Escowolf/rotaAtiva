@@ -8,7 +8,7 @@ import { Alert, Collapse } from "@mui/material";
 
 let PageSize = 6;
 
-export function RemoverVaga() {
+export function RemoverZona() {
   const areasService = new AreasService();
 
   const vagaService = new VagaService();
@@ -62,13 +62,13 @@ export function RemoverVaga() {
   return (
     <>
       <div id="wrapper">
-        <h1 className="tituloPag">Remover Vaga</h1>
+        <h1 className="tituloPag">Remover Zona</h1>
         <div class="adicionar">
           <div className="alternar">
-            <Link to="/menulogado/editarVaga">
+            <Link to="/menulogado/editarZona">
               <button className="alternar_cadastrar">Cadastrar</button>
             </Link>
-            <Link to="/menulogado/removerVaga">
+            <Link to="/menulogado/removerZona">
               <button className="alternar_remover">Remover</button>
             </Link>
           </div>

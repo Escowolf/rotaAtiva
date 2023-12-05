@@ -14,8 +14,8 @@ import { DadoUsuario } from "./interno/dados_usuario/dadoUsuario";
 import { RelatorioDeUso } from "./interno/relatorio_uso/relatorioDeUso";
 import Dashboard from "./interno/dashboard/dashboard";
 import { EditaPerfil } from "./interno/edita_perfil/edita_perfil";
-import { EditarVaga } from "./interno/adicionar_remover/EditarVaga";
-import { RemoverVaga } from "./interno/adicionar_remover/RemoverVaga";
+import { EditarZona } from "./interno/adicionar_remover/EditarZona";
+import { RemoverZona } from "./interno/adicionar_remover/RemoverZona";
 
 function App() {
   return (
@@ -32,8 +32,8 @@ function App() {
           <Route element={<DadoUsuario/>} path="dadoUsuario/:id"/>
           <Route element={<RelatorioDeUso/>} path="relatorioUso"/>
           <Route element={<EditaPerfil/>} path="perfil"/>
-          <Route element={<EditarVaga/>} path="editarVaga"/>
-          <Route element={<RemoverVaga/>} path="removerVaga"/>
+          <Route element={<EditarZona/>} path="editarZona"/>
+          <Route element={<RemoverZona/>} path="removerZona"/>
         </Route>
       </Routes>
     </>
