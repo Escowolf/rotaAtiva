@@ -42,7 +42,7 @@ export function NavbarLateral() {
         <img
           className="rounded-pill img-fluid"
           width="65"
-          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSdfX8KOUWEGHqmYEX625RAql_k8JdAP1Rog&usqp=CAU"
           alt="Imagem do usuário"
         />
         <div>
@@ -50,6 +50,7 @@ export function NavbarLateral() {
             <Link className="btnSideBar" to={{ pathname: `/menulogado/perfil` }}>
               <span>
                 {usuario.nome}
+                Teste
               </span>
             </Link>
           </h5>
@@ -87,9 +88,9 @@ export function NavbarLateral() {
         </li>
         <li className="">
           <i className="uil-map-marker"></i>
-          <Link className="btnSideBar" to="/menulogado/editarVaga">
+          <Link className="btnSideBar" to="/menulogado/editarZona">
             <img src="/img/mapa.svg" alt="Mapa" />
-            <span>Editar Vaga</span>
+            <span>Editar Zona</span>
           </Link>
         </li>
       </ul>
