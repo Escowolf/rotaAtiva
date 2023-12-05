@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import UserService from "../../../../service/users";
+import UserService from "../../../../../../../../../src/main/ui/src/service/users";
 import "./Sidebar.css";
 
 export function NavbarLateral() {

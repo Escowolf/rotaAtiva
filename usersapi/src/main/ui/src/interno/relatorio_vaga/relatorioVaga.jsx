@@ -3,7 +3,7 @@ import Pagination from "../../components/Paginacao/Pagination";
 import Topbar from "../home/Componentes/topbar/Topbar";
 import Sidebar from "../home/Componentes/sidebar/Sidebar";
 import "./relatorioVaga.css";
-import VagaService from "../../service/vaga";
+import VagaService from "../../../../../../../src/main/ui/src/service/vaga";
 import { Link } from "react-router-dom";
 
 let PageSize = 10;

@@ -1,8 +1,8 @@
 import { Alert, Collapse } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import AreasService from "../../service/areas";
-import VagaService from "../../service/vaga";
+import AreasService from "../../../../../../../src/main/ui/src/service/areas";
+import VagaService from "../../../../../../../src/main/ui/src/service/vaga";
 import "./editar_vaga/adicionar_remover.css";
 
 export function EditarZona() {

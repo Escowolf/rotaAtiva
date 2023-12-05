@@ -6,10 +6,10 @@ import {
   Marker,
 } from "@react-google-maps/api";
 import { useEffect, useMemo, useState } from "react";
-import VagaService from "../../service/vaga";
+import VagaService from "../../../../../../../src/main/ui/src/service/vaga";
 import Pagination from "../../components/Paginacao/Pagination";
 import { Link, useNavigate } from "react-router-dom";
-import AreasService from "../../service/areas";
+import AreasService from "../../../../../../../src/main/ui/src/service/areas";
 
 const center = { lat: -3.735015, lng: -38.494695 };
 

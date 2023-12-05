@@ -1,8 +1,8 @@
 import { Alert, Collapse } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import AdmService from '../../service/adm';
-import UserService from '../../service/users';
+import AdmService from '../../../../../../../src/main/ui/src/service/adm';
+import UserService from '../../../../../../../src/main/ui/src/service/users';
 import './edita_perfil.css'
 
 

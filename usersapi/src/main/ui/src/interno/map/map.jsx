@@ -7,8 +7,8 @@ import {
 } from "@react-google-maps/api";
 import { useEffect, useState } from "react";
 import './map.css'
-import AreasService from "../../service/areas";
-import VagaService from "../../service/vaga";
+import AreasService from "../../../../../../../src/main/ui/src/service/areas";
+import VagaService from "../../../../../../../src/main/ui/src/service/vaga";
 
 const center = { lat: -3.735015, lng: -38.494695 };
 
