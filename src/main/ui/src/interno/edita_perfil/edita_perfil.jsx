@@ -1,8 +1,7 @@
 import { Alert, Collapse } from '@mui/material';
 import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import AdmService from '../../../../../../../src/main/ui/src/service/adm';
-import UserService from '../../../../../../../src/main/ui/src/service/users';
+import AdmService from '../../service/adm';
+import UserService from '../../service/users';
 import './edita_perfil.css'
 
 
@@ -43,7 +42,7 @@ export function EditaPerfil() {
     useEffect(() => {
         userService.getUsuario().then((resp) => {
             let id = localStorage.getItem("usuarioLogado")
-            let login = resp.data.find((p) => p.id == id);
+            let login = resp.data.find((p) => p.id === id);
             console.log(login)
             if (login) {
                 setUsuario(login)

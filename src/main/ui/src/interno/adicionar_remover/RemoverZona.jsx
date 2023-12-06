@@ -1,9 +1,9 @@
 import "./editar_vaga/adicionar_remover.css";
 import { useEffect, useMemo, useState } from "react";
-import VagaService from "../../../../../../../src/main/ui/src/service/vaga";
+import VagaService from "../../service/vaga";
 import Pagination from "../../components/Paginacao/Pagination";
 import { Link } from "react-router-dom";
-import AreasService from "../../../../../../../src/main/ui/src/service/areas";
+import AreasService from "../../service/areas";
 import { Alert, Collapse } from "@mui/material";
 
 let PageSize = 6;
@@ -128,9 +128,9 @@ export function RemoverZona() {
                             {item.logradouro} - {item.bairro}
                           </Link>
                         </td>
-                        <td>{(item.credito == null || item.credito == undefined)  ? 0 : item.credito}</td>
-                        <td>{(item.totalVeiculos == null || item.totalVeiculos == undefined) ? 0 : item.totalVeiculos}</td>
-                        <td>{(item.tempoUso == null|| item.tempoUso == undefined) ? 0 : item.tempoUso} h</td>
+                        <td>{(item.credito === null || item.credito === undefined)  ? 0 : item.credito}</td>
+                        <td>{(item.totalVeiculos === null || item.totalVeiculos === undefined) ? 0 : item.totalVeiculos}</td>
+                        <td>{(item.tempoUso === null|| item.tempoUso === undefined) ? 0 : item.tempoUso} h</td>
                         <td
                           className="remover"
                           onClick={() => excluir(item.id)}

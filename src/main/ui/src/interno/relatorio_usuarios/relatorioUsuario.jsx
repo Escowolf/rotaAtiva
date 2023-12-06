@@ -9,8 +9,8 @@ import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import Pagination from "../../components/Paginacao/Pagination";
 import "./relatorioUsuario.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import AreasService from "../../../../../../../src/main/ui/src/service/areas";
-import UserService from "../../../../../../../src/main/ui/src/service/users";
+import AreasService from "../../service/areas";
+import UserService from "../../service/users";
 
 let PageSize = 5;
 

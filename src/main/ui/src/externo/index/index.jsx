@@ -3,11 +3,11 @@ import CaixaFormularioLogin from "../../components/caixaFormularioLogin/caixaFor
 import { useState } from "react";
 import { log } from "../../dados/dadosFormulario";
 import { Link, useNavigate } from "react-router-dom";
-import UserService from "../../../../../../../src/main/ui/src/service/users";
+import UserService from "../../service/users";
 // import { Cabecalho } from "../cabecalho/cabecalho";
 // import { login } from "../../service/autenticacao";
-import API from "../../../../../../../src/main/ui/src/service/api";
-import AdmService from "../../../../../../../src/main/ui/src/service/adm";
+import API from "../../service/api";
+import AdmService from "../../service/adm";
 import Alert from '@mui/material/Alert';
 import { Collapse } from "@mui/material";
 

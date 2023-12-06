@@ -1,4 +1,4 @@
-import { Box, Flex, others, SkeletonText } from "@chakra-ui/react";
+import { Box, Flex, SkeletonText } from "@chakra-ui/react";
 import {
   useJsApiLoader,
   GoogleMap,
@@ -6,17 +6,17 @@ import {
   Marker,
 } from "@react-google-maps/api";
 import { useEffect, useMemo, useState } from "react";
-import VagaService from "../../../../../../../src/main/ui/src/service/vaga";
+import VagaService from "../../service/vaga";
 import Pagination from "../../components/Paginacao/Pagination";
 import { Link, useNavigate } from "react-router-dom";
-import AreasService from "../../../../../../../src/main/ui/src/service/areas";
+// import AreasService from "../../service/areas";
 
 const center = { lat: -3.735015, lng: -38.494695 };
 
 let PageSize = 5;
 
 export function RelatorioDeUso() {
-  const areasService = new AreasService();
+  // const areasService = new AreasService();
   const [dados, setDados] = useState([]);
 
   const navigate = useNavigate();
@@ -67,7 +67,7 @@ export function RelatorioDeUso() {
     libraries: ["places"],
   });
 
-  const [showInfoWindow, setShowInfoWindow] = useState(false);
+  const [showInfoWindow] = useState(false);
 
   if (!isLoaded) {
     return <SkeletonText />;
@@ -84,7 +84,7 @@ export function RelatorioDeUso() {
               mapContainerStyle={{ width: "100%", height: "100%" }}
             >
               {dados.map((d) => {
-                var x = vagas.find((p) => p.logradouro == d.logradouro);
+                var x = vagas.find((p) => p.logradouro === d.logradouro);
 
                 return (
                   <>
@@ -166,9 +166,9 @@ export function RelatorioDeUso() {
                           {item.logradouro} - {item.bairro}
                         </Link>
                       </td>
-                      <td>{(item.credito == null || item.credito == undefined)  ? 0 : item.credito}</td>
-                      <td>{(item.totalVeiculos == null || item.totalVeiculos == undefined) ? 0 : item.totalVeiculos}</td>
-                      <td>{(item.tempoUso == null|| item.tempoUso == undefined) ? 0 : item.tempoUso} h</td>
+                      <td>{(item.credito === null || item.credito === undefined)  ? 0 : item.credito}</td>
+                      <td>{(item.totalVeiculos === null || item.totalVeiculos === undefined) ? 0 : item.totalVeiculos}</td>
+                      <td>{(item.tempoUso === null|| item.tempoUso === undefined) ? 0 : item.tempoUso} h</td>
                     </tr>
                   );
                 })}

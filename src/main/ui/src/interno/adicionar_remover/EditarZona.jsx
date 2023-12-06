@@ -1,12 +1,12 @@
 import { Alert, Collapse } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import AreasService from "../../../../../../../src/main/ui/src/service/areas";
-import VagaService from "../../../../../../../src/main/ui/src/service/vaga";
+// import AreasService from "../../src/service/areas";
+import VagaService from "../../service/vaga";
 import "./editar_vaga/adicionar_remover.css";
 
 export function EditarZona() {
-  const areasService = new AreasService();
+  // const areasService = new AreasService();
   const vagaService = new VagaService();
 
   const [lat, setLat] = useState("");
@@ -16,9 +16,9 @@ export function EditarZona() {
   const [nome, setNome] = useState("");
   const [rua, setRua] = useState("");
   const [bairro, setBairro] = useState("");
-  const [tempo, setTempo] = useState("");
+  // const [tempo, setTempo] = useState("");
   const [tipoVaga, setTipoVaga] = useState("");
-  const [hora, setHora] = useState("");
+  // const [hora, setHora] = useState("");
   const [alert, setAlert] = useState(false);
   const [alertOk, setAlertOK] = useState(false);
 
@@ -139,7 +139,7 @@ export function EditarZona() {
             </fieldset>
             <fieldset className="adicionar_corpo">
               <select
-                onChange={(e) => setTipoVaga(e.target.value == "comum" ? false : true)}
+                onChange={(e) => setTipoVaga(e.target.value === "comum" ? false : true)}
                 value={tipoVaga}
                 className="tipodevaga"
                 name="tipodevaga"

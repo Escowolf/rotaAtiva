@@ -1,16 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Topbar.css";
 
-const ColoredLine = ({ color }) => (
-  <hr
-    style={{
-      color: color,
-      backgroundColor: color,
-      height: 5,
-    }}
-  />
-);
-
 export function TopBar() {
 
   function logout(){

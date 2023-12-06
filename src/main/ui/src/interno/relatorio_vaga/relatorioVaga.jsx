@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Pagination from "../../components/Paginacao/Pagination";
-import Topbar from "../home/Componentes/topbar/Topbar";
-import Sidebar from "../home/Componentes/sidebar/Sidebar";
 import "./relatorioVaga.css";
-import VagaService from "../../../../../../../src/main/ui/src/service/vaga";
+import VagaService from "../../service/vaga";
 import { Link } from "react-router-dom";
 
 let PageSize = 10;
@@ -96,9 +94,9 @@ export function RelatorioVagas() {
                         {item.logradouro} - {item.bairro}
                       </Link>
                     </td>
-                    <td>{(item.credito == null || item.credito == undefined)  ? 0 : item.credito}</td>
-                    <td>{(item.totalVeiculos == null || item.totalVeiculos == undefined) ? 0 : item.totalVeiculos}</td>
-                    <td>{(item.tempoUso == null|| item.tempoUso == undefined) ? 0 : item.tempoUso} h</td>
+                    <td>{(item.credito === null || item.credito === undefined)  ? 0 : item.credito}</td>
+                    <td>{(item.totalVeiculos === null || item.totalVeiculos === undefined) ? 0 : item.totalVeiculos}</td>
+                    <td>{(item.tempoUso === null|| item.tempoUso === undefined) ? 0 : item.tempoUso} h</td>
                   </tr>
                 );
               })}
