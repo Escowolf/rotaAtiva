@@ -13,77 +13,81 @@ import com.rotativa.usersapi.services.VagaService;
 @Transactional
 public class VagaServiceImpl implements VagaService {
 
-    private final VagaRepository vagaRepository;
+  private final VagaRepository vagaRepository;
 
-    public VagaServiceImpl(VagaRepository vagaRepository) {
-        this.vagaRepository = vagaRepository;
-    }
+  public VagaServiceImpl(VagaRepository vagaRepository) {
+    this.vagaRepository = vagaRepository;
+  }
 
-    @Override
-    public Vaga save(Vaga vaga) {
-        return vagaRepository.save(vaga);
-    }
+  @Override
+  public Vaga save(Vaga vaga) {
+    return vagaRepository.save(vaga);
+  }
 
-    @Override
-    public Vaga update(Vaga vaga) {
-        return vagaRepository.save(vaga);
-    }
+  @Override
+  public Vaga update(Vaga vaga) {
+    return vagaRepository.save(vaga);
+  }
 
-    @Override
-    public Optional<Vaga> partialUpdate(Vaga vaga) {
+  @Override
+  public Optional<Vaga> partialUpdate(Vaga vaga) {
 
-        return vagaRepository
-            .findById(vaga.getId())
-            .map(existingVaga -> {
-                if (vaga.getLogradouro() != null) {
-                    existingVaga.setLogradouro(vaga.getLogradouro());
-                }
-                if (vaga.getBairro() != null) {
-                    existingVaga.setBairro(vaga.getBairro());
-                }
-                if (vaga.getAcessibilidade() != null) {
-                    existingVaga.setAcessibilidade(vaga.getAcessibilidade());
-                }
-                if (vaga.getNome() != null) {
-                    existingVaga.setNome(vaga.getNome());
-                }
-                if (vaga.getLongitudeInicial() != null) {
-                    existingVaga.setLongitudeInicial(vaga.getLongitudeInicial());
-                }
-                if (vaga.getLongitudeFinal() != null) {
-                    existingVaga.setLongitudeFinal(vaga.getLongitudeFinal());
-                }
-                if (vaga.getLatitudeInicial() != null) {
-                    existingVaga.setLatitudeInicial(vaga.getLatitudeInicial());
-                }
-                if (vaga.getLatitudeFinal() != null) {
-                    existingVaga.setLatitudeFinal(vaga.getLatitudeFinal());
-                }
+    return vagaRepository
+        .findById(vaga.getId())
+        .map(existingVaga -> {
+          if (vaga.getLogradouro() != null) {
+            existingVaga.setLogradouro(vaga.getLogradouro());
+          }
+          if (vaga.getBairro() != null) {
+            existingVaga.setBairro(vaga.getBairro());
+          }
+          if (vaga.getAcessibilidade() != null) {
+            existingVaga.setAcessibilidade(vaga.getAcessibilidade());
+          }
+          if (vaga.getNome() != null) {
+            existingVaga.setNome(vaga.getNome());
+          }
+          if (vaga.getLongitudeInicial() != null) {
+            existingVaga.setLongitudeInicial(vaga.getLongitudeInicial());
+          }
+          if (vaga.getLongitudeFinal() != null) {
+            existingVaga.setLongitudeFinal(vaga.getLongitudeFinal());
+          }
+          if (vaga.getLatitudeInicial() != null) {
+            existingVaga.setLatitudeInicial(vaga.getLatitudeInicial());
+          }
+          if (vaga.getLatitudeFinal() != null) {
+            existingVaga.setLatitudeFinal(vaga.getLatitudeFinal());
+          }
 
-                return existingVaga;
-            })
-            .map(vagaRepository::save);
-    }
+          return existingVaga;
+        })
+        .map(vagaRepository::save);
+  }
 
-    @Override
-    @Transactional(readOnly = true)
-    public List<Vaga> findAll() {
-        return vagaRepository.findAll();
-    }
+  @Transactional(readOnly = true)
+  public List<Vaga> findAll() {
+    return vagaRepository.findAll();
+  }
 
-    @Override
-    @Transactional(readOnly = true)
-    public Optional<Vaga> findOne(Long id) {
-        return vagaRepository.findById(id);
-    }
+  @Transactional(readOnly = true)
+  public Optional<Vaga> findOne(Long id) {
+    return vagaRepository.findById(id);
+  }
 
-    @Override
-    public void delete(Long id) {
-        vagaRepository.deleteById(id);
-    }
+  public void delete(Long id) {
+    vagaRepository.deleteById(id);
+  }
 
-    @Override
-    public List<Vaga> buscarVaga(String nome) {
-        return vagaRepository.buscarVaga(nome);
-    }
+  public List<Vaga> buscarVaga(String nome) {
+    return vagaRepository.buscarVaga(nome);
+  }
+
+  public List<Vaga> vagasDisponiveis() {
+    return vagaRepository.findByDisponibilidadeTrue();
+  }
+
+  public Integer getOcupacaoById(Long id) {
+    return vagaRepository.getOcupacaoById(id);
+  }
 }

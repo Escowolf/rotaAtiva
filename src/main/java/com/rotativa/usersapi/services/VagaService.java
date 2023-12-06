@@ -1,4 +1,5 @@
 package com.rotativa.usersapi.services;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -6,17 +7,22 @@ import com.rotativa.usersapi.model.Vaga;
 
 public interface VagaService {
 
-    List<Vaga> buscarVaga(String nome);
+  List<Vaga> buscarVaga(String nome);
 
-    Vaga save(Vaga vaga);
+  List<Vaga> vagasDisponiveis();
 
-    Vaga update(Vaga vaga);
+  Vaga save(Vaga vaga);
 
-    Optional<Vaga> partialUpdate(Vaga vaga);
+  Vaga update(Vaga vaga);
 
-    List<Vaga> findAll();
+  Optional<Vaga> partialUpdate(Vaga vaga);
 
-    Optional<Vaga> findOne(Long id);
+  List<Vaga> findAll();
 
-    void delete(Long id);
+  Optional<Vaga> findOne(Long id);
+
+  void delete(Long id);
+
+  Integer getOcupacaoById(Long id);
+
 }
