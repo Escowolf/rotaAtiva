@@ -1,0 +1,2711 @@
+{
+  "user": [
+    {
+      "id": 101,
+      "email": "admin@g.com",
+      "senha": "123"
+    }
+  ],
+  "usuario": [
+    {
+      "nome": "Buffy Cooley",
+      "cpf": "551875 7546672155",
+      "email": "eu@protonmail.org",
+      "datanasc": "Mar 11, 2014",
+      "id": 1,
+      "senha": "MQV11YLU1MH",
+      "acessibilidade": 0,
+      "ticket": 8,
+      "token": "123klanweon"
+    },
+    {
+      "id": 2,
+      "nome": "Jordan Salazar",
+      "cpf": "4556436877337",
+      "email": "odio@hotmail.ca",
+      "senha": "OEO78VTL5KQ",
+      "acessibilidade": 0,
+      "datanasc": "Jul 7, 2023",
+      "ticket": 5
+    },
+    {
+      "id": 3,
+      "nome": "Ivy Cook",
+      "cpf": "417500 211391 7152",
+      "email": "faucibus.leo@outlook.net",
+      "senha": "DFM87NTL2XT",
+      "acessibilidade": 0,
+      "datanasc": "Apr 30, 2000",
+      "ticket": 6
+    },
+    {
+      "id": 4,
+      "nome": "Nash Porter",
+      "cpf": "630413 33 8186 8544 610",
+      "email": "dictum.ultricies@icloud.ca",
+      "senha": "RRM22OIH6PE",
+      "acessibilidade": 0,
+      "datanasc": "May 12, 2015",
+      "ticket": 3
+    },
+    {
+      "id": 5,
+      "nome": "Katelyn Brewer",
+      "cpf": "376543616479539",
+      "email": "vivamus@protonmail.couk",
+      "senha": "BKS12WDS7IQ",
+      "acessibilidade": 0,
+      "datanasc": "Oct 21, 2016",
+      "ticket": 3
+    },
+    {
+      "id": 6,
+      "nome": "Vaughan Griffith",
+      "cpf": "3695 454422 22867",
+      "email": "fusce.aliquam@hotmail.couk",
+      "senha": "MWR47XFL8WU",
+      "acessibilidade": 1,
+      "datanasc": "Feb 22, 2009",
+      "ticket": 7
+    },
+    {
+      "id": 7,
+      "nome": "Yoko Downs",
+      "cpf": "67626175365824662",
+      "email": "tortor@hotmail.net",
+      "senha": "CTY64BPX8JW",
+      "acessibilidade": 0,
+      "datanasc": "Jun 22, 2014",
+      "ticket": 4
+    },
+    {
+      "id": 8,
+      "nome": "Wylie Lester",
+      "cpf": "6767492436327764291",
+      "email": "justo.eu@aol.org",
+      "senha": "DWC01HIO1ZQ",
+      "acessibilidade": 1,
+      "datanasc": "Jul 16, 2007",
+      "ticket": 3
+    },
+    {
+      "id": 9,
+      "nome": "Richard Pickett",
+      "cpf": "6331104244727914440",
+      "email": "quisque.nonummy@protonmail.ca",
+      "senha": "VGC15MPG3QE",
+      "acessibilidade": 1,
+      "datanasc": "Aug 27, 2015",
+      "ticket": 2
+    },
+    {
+      "id": 10,
+      "nome": "Zelda Paul",
+      "cpf": "3789 968264 32425",
+      "email": "mi.lacinia@aol.ca",
+      "senha": "FYZ75JAB7HJ",
+      "acessibilidade": 1,
+      "datanasc": "Feb 21, 2016",
+      "ticket": 7
+    }
+  ],
+  "zona": [
+    {
+      "id": 1,
+      "nome_zona": "zona 1",
+      "rua_avenida": "Av. 666",
+      "Bairro": "Inferno",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Buffy Cooley",
+          "cpf": "551875 7546672155",
+          "email": "eu@protonmail.org",
+          "senha": "MQV11YLU1MH",
+          "acessibilidade": 0,
+          "datanasc": "Mar 11, 2014",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Jordan Salazar",
+          "cpf": "4556436877337",
+          "email": "odio@hotmail.ca",
+          "senha": "OEO78VTL5KQ",
+          "acessibilidade": 0,
+          "datanasc": "Jul 7, 2023",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome_zona": "zona 2",
+      "rua_avenida": "Av. X",
+      "Bairro": "7 Palmos abaixo",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Ivy Cook",
+          "cpf": "417500 211391 7152",
+          "email": "faucibus.leo@outlook.net",
+          "senha": "DFM87NTL2XT",
+          "acessibilidade": 0,
+          "datanasc": "Apr 30, 2000",
+          "credito": 5,
+          "tempo_uso": 10,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 6,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 4,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Nash Porter",
+          "cpf": "630413 33 8186 8544 610",
+          "email": "dictum.ultricies@icloud.ca",
+          "senha": "RRM22OIH6PE",
+          "acessibilidade": 0,
+          "datanasc": "May 12, 2015",
+          "credito": 2,
+          "tempo_uso": 7,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Katelyn Brewer",
+          "cpf": "376543616479539",
+          "email": "vivamus@protonmail.couk",
+          "senha": "BKS12WDS7IQ",
+          "acessibilidade": 0,
+          "datanasc": "Oct 21, 2016",
+          "credito": 2,
+          "tempo_uso": 2,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome_zona": "zona 3",
+      "rua_avenida": "Av. D",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Yoko Downs",
+          "cpf": "67626175365824662",
+          "email": "tortor@hotmail.net",
+          "senha": "CTY64BPX8JW",
+          "acessibilidade": 0,
+          "datanasc": "Jun 22, 2014",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Wylie Lester",
+          "cpf": "6767492436327764291",
+          "email": "justo.eu@aol.org",
+          "senha": "DWC01HIO1ZQ",
+          "acessibilidade": 1,
+          "datanasc": "Jul 16, 2007",
+          "credito": 2,
+          "tempo_uso": 9,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nome": "Richard Pickett",
+          "cpf": "6331104244727914440",
+          "email": "quisque.nonummy@protonmail.ca",
+          "senha": "VGC15MPG3QE",
+          "acessibilidade": 1,
+          "datanasc": "Aug 27, 2015",
+          "credito": 2,
+          "tempo_uso": 6,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome_zona": "zona 4",
+      "rua_avenida": "Av. A",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Zelda Paul",
+          "cpf": "3789 968264 32425",
+          "email": "mi.lacinia@aol.ca",
+          "senha": "FYZ75JAB7HJ",
+          "acessibilidade": 1,
+          "datanasc": "Feb 21, 2016",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "nome_zona": "zona 5",
+      "rua_avenida": "Av. B",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Buffy Cooley",
+          "cpf": "551875 7546672155",
+          "email": "eu@protonmail.org",
+          "senha": "MQV11YLU1MH",
+          "acessibilidade": 0,
+          "datanasc": "Mar 11, 2014",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Jordan Salazar",
+          "cpf": "4556436877337",
+          "email": "odio@hotmail.ca",
+          "senha": "OEO78VTL5KQ",
+          "acessibilidade": 0,
+          "datanasc": "Jul 7, 2023",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nome_zona": "zona 6",
+      "rua_avenida": "Av. F",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Ivy Cook",
+          "cpf": "417500 211391 7152",
+          "email": "faucibus.leo@outlook.net",
+          "senha": "DFM87NTL2XT",
+          "acessibilidade": 0,
+          "datanasc": "Apr 30, 2000",
+          "credito": 5,
+          "tempo_uso": 10,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 6,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 4,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Nash Porter",
+          "cpf": "630413 33 8186 8544 610",
+          "email": "dictum.ultricies@icloud.ca",
+          "senha": "RRM22OIH6PE",
+          "acessibilidade": 0,
+          "datanasc": "May 12, 2015",
+          "credito": 2,
+          "tempo_uso": 7,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Katelyn Brewer",
+          "cpf": "376543616479539",
+          "email": "vivamus@protonmail.couk",
+          "senha": "BKS12WDS7IQ",
+          "acessibilidade": 0,
+          "datanasc": "Oct 21, 2016",
+          "credito": 2,
+          "tempo_uso": 2,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nome_zona": "zona 7",
+      "rua_avenida": "Av. G",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Yoko Downs",
+          "cpf": "67626175365824662",
+          "email": "tortor@hotmail.net",
+          "senha": "CTY64BPX8JW",
+          "acessibilidade": 0,
+          "datanasc": "Jun 22, 2014",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Wylie Lester",
+          "cpf": "6767492436327764291",
+          "email": "justo.eu@aol.org",
+          "senha": "DWC01HIO1ZQ",
+          "acessibilidade": 1,
+          "datanasc": "Jul 16, 2007",
+          "credito": 2,
+          "tempo_uso": 9,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nome": "Richard Pickett",
+          "cpf": "6331104244727914440",
+          "email": "quisque.nonummy@protonmail.ca",
+          "senha": "VGC15MPG3QE",
+          "acessibilidade": 1,
+          "datanasc": "Aug 27, 2015",
+          "credito": 2,
+          "tempo_uso": 6,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nome_zona": "zona 8",
+      "rua_avenida": "Av. H",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Zelda Paul",
+          "cpf": "3789 968264 32425",
+          "email": "mi.lacinia@aol.ca",
+          "senha": "FYZ75JAB7HJ",
+          "acessibilidade": 1,
+          "datanasc": "Feb 21, 2016",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nome_zona": "zona 9",
+      "rua_avenida": "Av. I",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Buffy Cooley",
+          "cpf": "551875 7546672155",
+          "email": "eu@protonmail.org",
+          "senha": "MQV11YLU1MH",
+          "acessibilidade": 0,
+          "datanasc": "Mar 11, 2014",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Jordan Salazar",
+          "cpf": "4556436877337",
+          "email": "odio@hotmail.ca",
+          "senha": "OEO78VTL5KQ",
+          "acessibilidade": 0,
+          "datanasc": "Jul 7, 2023",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "nome_zona": "zona 10",
+      "rua_avenida": "Av. J",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Ivy Cook",
+          "cpf": "417500 211391 7152",
+          "email": "faucibus.leo@outlook.net",
+          "senha": "DFM87NTL2XT",
+          "acessibilidade": 0,
+          "datanasc": "Apr 30, 2000",
+          "credito": 5,
+          "tempo_uso": 10,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 6,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 4,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Nash Porter",
+          "cpf": "630413 33 8186 8544 610",
+          "email": "dictum.ultricies@icloud.ca",
+          "senha": "RRM22OIH6PE",
+          "acessibilidade": 0,
+          "datanasc": "May 12, 2015",
+          "credito": 2,
+          "tempo_uso": 7,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Katelyn Brewer",
+          "cpf": "376543616479539",
+          "email": "vivamus@protonmail.couk",
+          "senha": "BKS12WDS7IQ",
+          "acessibilidade": 0,
+          "datanasc": "Oct 21, 2016",
+          "credito": 2,
+          "tempo_uso": 2,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "nome_zona": "zona 11",
+      "rua_avenida": "Av. K",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Yoko Downs",
+          "cpf": "67626175365824662",
+          "email": "tortor@hotmail.net",
+          "senha": "CTY64BPX8JW",
+          "acessibilidade": 0,
+          "datanasc": "Jun 22, 2014",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Wylie Lester",
+          "cpf": "6767492436327764291",
+          "email": "justo.eu@aol.org",
+          "senha": "DWC01HIO1ZQ",
+          "acessibilidade": 1,
+          "datanasc": "Jul 16, 2007",
+          "credito": 2,
+          "tempo_uso": 9,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nome": "Richard Pickett",
+          "cpf": "6331104244727914440",
+          "email": "quisque.nonummy@protonmail.ca",
+          "senha": "VGC15MPG3QE",
+          "acessibilidade": 1,
+          "datanasc": "Aug 27, 2015",
+          "credito": 2,
+          "tempo_uso": 6,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "nome_zona": "zona 12",
+      "rua_avenida": "Av. L",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Zelda Paul",
+          "cpf": "3789 968264 32425",
+          "email": "mi.lacinia@aol.ca",
+          "senha": "FYZ75JAB7HJ",
+          "acessibilidade": 1,
+          "datanasc": "Feb 21, 2016",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "nome_zona": "zona 13",
+      "rua_avenida": "Av. M",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Buffy Cooley",
+          "cpf": "551875 7546672155",
+          "email": "eu@protonmail.org",
+          "senha": "MQV11YLU1MH",
+          "acessibilidade": 0,
+          "datanasc": "Mar 11, 2014",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Jordan Salazar",
+          "cpf": "4556436877337",
+          "email": "odio@hotmail.ca",
+          "senha": "OEO78VTL5KQ",
+          "acessibilidade": 0,
+          "datanasc": "Jul 7, 2023",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "nome_zona": "zona 14",
+      "rua_avenida": "Av. N",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Ivy Cook",
+          "cpf": "417500 211391 7152",
+          "email": "faucibus.leo@outlook.net",
+          "senha": "DFM87NTL2XT",
+          "acessibilidade": 0,
+          "datanasc": "Apr 30, 2000",
+          "credito": 5,
+          "tempo_uso": 10,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 6,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 4,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Nash Porter",
+          "cpf": "630413 33 8186 8544 610",
+          "email": "dictum.ultricies@icloud.ca",
+          "senha": "RRM22OIH6PE",
+          "acessibilidade": 0,
+          "datanasc": "May 12, 2015",
+          "credito": 2,
+          "tempo_uso": 7,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Katelyn Brewer",
+          "cpf": "376543616479539",
+          "email": "vivamus@protonmail.couk",
+          "senha": "BKS12WDS7IQ",
+          "acessibilidade": 0,
+          "datanasc": "Oct 21, 2016",
+          "credito": 2,
+          "tempo_uso": 2,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "nome_zona": "zona 15",
+      "rua_avenida": "Av. O",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Yoko Downs",
+          "cpf": "67626175365824662",
+          "email": "tortor@hotmail.net",
+          "senha": "CTY64BPX8JW",
+          "acessibilidade": 0,
+          "datanasc": "Jun 22, 2014",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Wylie Lester",
+          "cpf": "6767492436327764291",
+          "email": "justo.eu@aol.org",
+          "senha": "DWC01HIO1ZQ",
+          "acessibilidade": 1,
+          "datanasc": "Jul 16, 2007",
+          "credito": 2,
+          "tempo_uso": 9,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nome": "Richard Pickett",
+          "cpf": "6331104244727914440",
+          "email": "quisque.nonummy@protonmail.ca",
+          "senha": "VGC15MPG3QE",
+          "acessibilidade": 1,
+          "datanasc": "Aug 27, 2015",
+          "credito": 2,
+          "tempo_uso": 6,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "nome_zona": "zona 16",
+      "rua_avenida": "Av. P",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Zelda Paul",
+          "cpf": "3789 968264 32425",
+          "email": "mi.lacinia@aol.ca",
+          "senha": "FYZ75JAB7HJ",
+          "acessibilidade": 1,
+          "datanasc": "Feb 21, 2016",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "nome_zona": "zona 17",
+      "rua_avenida": "Av. Q",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Buffy Cooley",
+          "cpf": "551875 7546672155",
+          "email": "eu@protonmail.org",
+          "senha": "MQV11YLU1MH",
+          "acessibilidade": 0,
+          "datanasc": "Mar 11, 2014",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Jordan Salazar",
+          "cpf": "4556436877337",
+          "email": "odio@hotmail.ca",
+          "senha": "OEO78VTL5KQ",
+          "acessibilidade": 0,
+          "datanasc": "Jul 7, 2023",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "nome_zona": "zona 18",
+      "rua_avenida": "Av. R",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Ivy Cook",
+          "cpf": "417500 211391 7152",
+          "email": "faucibus.leo@outlook.net",
+          "senha": "DFM87NTL2XT",
+          "acessibilidade": 0,
+          "datanasc": "Apr 30, 2000",
+          "credito": 5,
+          "tempo_uso": 10,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 6,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 4,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Nash Porter",
+          "cpf": "630413 33 8186 8544 610",
+          "email": "dictum.ultricies@icloud.ca",
+          "senha": "RRM22OIH6PE",
+          "acessibilidade": 0,
+          "datanasc": "May 12, 2015",
+          "credito": 2,
+          "tempo_uso": 7,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Katelyn Brewer",
+          "cpf": "376543616479539",
+          "email": "vivamus@protonmail.couk",
+          "senha": "BKS12WDS7IQ",
+          "acessibilidade": 0,
+          "datanasc": "Oct 21, 2016",
+          "credito": 2,
+          "tempo_uso": 2,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "nome_zona": "zona 19",
+      "rua_avenida": "Av. S",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Yoko Downs",
+          "cpf": "67626175365824662",
+          "email": "tortor@hotmail.net",
+          "senha": "CTY64BPX8JW",
+          "acessibilidade": 0,
+          "datanasc": "Jun 22, 2014",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Wylie Lester",
+          "cpf": "6767492436327764291",
+          "email": "justo.eu@aol.org",
+          "senha": "DWC01HIO1ZQ",
+          "acessibilidade": 1,
+          "datanasc": "Jul 16, 2007",
+          "credito": 2,
+          "tempo_uso": 9,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nome": "Richard Pickett",
+          "cpf": "6331104244727914440",
+          "email": "quisque.nonummy@protonmail.ca",
+          "senha": "VGC15MPG3QE",
+          "acessibilidade": 1,
+          "datanasc": "Aug 27, 2015",
+          "credito": 2,
+          "tempo_uso": 6,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "nome_zona": "zona 20",
+      "rua_avenida": "Av. T",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Zelda Paul",
+          "cpf": "3789 968264 32425",
+          "email": "mi.lacinia@aol.ca",
+          "senha": "FYZ75JAB7HJ",
+          "acessibilidade": 1,
+          "datanasc": "Feb 21, 2016",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "nome_zona": "zona 21",
+      "rua_avenida": "Av. U",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Buffy Cooley",
+          "cpf": "551875 7546672155",
+          "email": "eu@protonmail.org",
+          "senha": "MQV11YLU1MH",
+          "acessibilidade": 0,
+          "datanasc": "Mar 11, 2014",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Jordan Salazar",
+          "cpf": "4556436877337",
+          "email": "odio@hotmail.ca",
+          "senha": "OEO78VTL5KQ",
+          "acessibilidade": 0,
+          "datanasc": "Jul 7, 2023",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "nome_zona": "zona 22",
+      "rua_avenida": "Av. V",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Ivy Cook",
+          "cpf": "417500 211391 7152",
+          "email": "faucibus.leo@outlook.net",
+          "senha": "DFM87NTL2XT",
+          "acessibilidade": 0,
+          "datanasc": "Apr 30, 2000",
+          "credito": 5,
+          "tempo_uso": 10,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 6,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 4,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Nash Porter",
+          "cpf": "630413 33 8186 8544 610",
+          "email": "dictum.ultricies@icloud.ca",
+          "senha": "RRM22OIH6PE",
+          "acessibilidade": 0,
+          "datanasc": "May 12, 2015",
+          "credito": 2,
+          "tempo_uso": 7,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Katelyn Brewer",
+          "cpf": "376543616479539",
+          "email": "vivamus@protonmail.couk",
+          "senha": "BKS12WDS7IQ",
+          "acessibilidade": 0,
+          "datanasc": "Oct 21, 2016",
+          "credito": 2,
+          "tempo_uso": 2,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "nome_zona": "zona 23",
+      "rua_avenida": "Av. X",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Yoko Downs",
+          "cpf": "67626175365824662",
+          "email": "tortor@hotmail.net",
+          "senha": "CTY64BPX8JW",
+          "acessibilidade": 0,
+          "datanasc": "Jun 22, 2014",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "nome": "Wylie Lester",
+          "cpf": "6767492436327764291",
+          "email": "justo.eu@aol.org",
+          "senha": "DWC01HIO1ZQ",
+          "acessibilidade": 1,
+          "datanasc": "Jul 16, 2007",
+          "credito": 2,
+          "tempo_uso": 9,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "nome": "Richard Pickett",
+          "cpf": "6331104244727914440",
+          "email": "quisque.nonummy@protonmail.ca",
+          "senha": "VGC15MPG3QE",
+          "acessibilidade": 1,
+          "datanasc": "Aug 27, 2015",
+          "credito": 2,
+          "tempo_uso": 6,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "nome_zona": "zona 24",
+      "rua_avenida": "Av. Z",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Zelda Paul",
+          "cpf": "3789 968264 32425",
+          "email": "mi.lacinia@aol.ca",
+          "senha": "FYZ75JAB7HJ",
+          "acessibilidade": 1,
+          "datanasc": "Feb 21, 2016",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Vaughan Griffith",
+          "cpf": "3695 454422 22867",
+          "email": "fusce.aliquam@hotmail.couk",
+          "senha": "MWR47XFL8WU",
+          "acessibilidade": 1,
+          "datanasc": "Feb 22, 2009",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "nome_zona": "zona 25",
+      "rua_avenida": "Av. C",
+      "Bairro": "Tartaro",
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Buffy Cooley",
+          "cpf": "551875 7546672155",
+          "email": "eu@protonmail.org",
+          "senha": "MQV11YLU1MH",
+          "acessibilidade": 0,
+          "datanasc": "Mar 11, 2014",
+          "credito": 4,
+          "tempo_uso": 8,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "azul",
+              "placa": "MOA-2877",
+              "modelo": "corola",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "HPC-9087",
+              "modelo": "uno",
+              "credito": 2,
+              "tempo_uso": "4:00"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nome": "Jordan Salazar",
+          "cpf": "4556436877337",
+          "email": "odio@hotmail.ca",
+          "senha": "OEO78VTL5KQ",
+          "acessibilidade": 0,
+          "datanasc": "Jul 7, 2023",
+          "credito": 2,
+          "tempo_uso": 4,
+          "veiculo": [
+            {
+              "id": 1,
+              "cor": "rosa",
+              "placa": "NAK-1275",
+              "modelo": "polo",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            },
+            {
+              "id": 2,
+              "cor": "vermelho",
+              "placa": "NEY-5840",
+              "modelo": "camaro",
+              "credito": 1,
+              "tempo_uso": "2:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome_zona": "testando",
+      "rua_avenida": "teste",
+      "Bairro": "1",
+      "usuarios": [],
+      "id": 28
+    }
+  ],
+  "areas": [
+    {
+      "id": 1,
+      "nome_zona": "zona 1",
+      "rua_avenida": "Av. 666",
+      "Bairro": "Inferno",
+      "path": [
+        {
+          "lat": -3.726077,
+          "lng": -38.495077
+        },
+        {
+          "lat": -3.725595,
+          "lng": -38.491622
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome_zona": "zona 2",
+      "rua_avenida": "Av. X",
+      "Bairro": "7 Palmos abaixo",
+      "path": [
+        {
+          "lat": -3.72658,
+          "lng": -38.491326
+        },
+        {
+          "lat": -3.7256,
+          "lng": -38.491543
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome_zona": "zona 3",
+      "rua_avenida": "Av. D",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.727608,
+          "lng": -38.491178
+        },
+        {
+          "lat": -3.729014,
+          "lng": -38.490775
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome_zona": "zona 4",
+      "rua_avenida": "Av. A",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.729014,
+          "lng": -38.490775
+        },
+        {
+          "lat": -3.735742,
+          "lng": -38.49282
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nome_zona": "zona 5",
+      "rua_avenida": "Av. B",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.729332,
+          "lng": -38.489679
+        },
+        {
+          "lat": -3.73806,
+          "lng": -38.492477
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nome_zona": "zona 6",
+      "rua_avenida": "Av. F",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.730903,
+          "lng": -38.49117
+        },
+        {
+          "lat": -3.731539,
+          "lng": -38.4894
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nome_zona": "zona 7",
+      "rua_avenida": "Av. G",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.731911,
+          "lng": -38.491402
+        },
+        {
+          "lat": -3.732594,
+          "lng": -38.489348
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nome_zona": "zona 8",
+      "rua_avenida": "Av. H",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.732925,
+          "lng": -38.491711
+        },
+        {
+          "lat": -3.733652,
+          "lng": -38.489326
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nome_zona": "zona 9",
+      "rua_avenida": "Av. I",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.733895,
+          "lng": -38.49202
+        },
+        {
+          "lat": -3.734798,
+          "lng": -38.489282
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "nome_zona": "zona 10",
+      "rua_avenida": "Av. J",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.735922,
+          "lng": -38.489193
+        },
+        {
+          "lat": -3.735922,
+          "lng": -38.487139
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "nome_zona": "zona 11",
+      "rua_avenida": "Av. K",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.735922,
+          "lng": -38.489193
+        },
+        {
+          "lat": -3.732352,
+          "lng": -38.500214
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "nome_zona": "zona 12",
+      "rua_avenida": "Av. L",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.732594,
+          "lng": -38.489746
+        },
+        {
+          "lat": -3.739362,
+          "lng": -38.491858
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "nome_zona": "zona 13",
+      "rua_avenida": "Av. M",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.735838,
+          "lng": -38.489639
+        },
+        {
+          "lat": -3.739709,
+          "lng": -38.490882
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "nome_zona": "zona 14",
+      "rua_avenida": "Av. N",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.737019,
+          "lng": -38.489135
+        },
+        {
+          "lat": -3.733684,
+          "lng": -38.499649
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "nome_zona": "zona 15",
+      "rua_avenida": "Av. O",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.734615,
+          "lng": -38.499971
+        },
+        {
+          "lat": -3.738022,
+          "lng": -38.489333
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "nome_zona": "zona 16",
+      "rua_avenida": "Av. P",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.738732,
+          "lng": -38.490701
+        },
+        {
+          "lat": -3.730532,
+          "lng": -38.515825
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "nome_zona": "zona 17",
+      "rua_avenida": "Av. Q",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.738173,
+          "lng": -38.49584
+        },
+        {
+          "lat": -3.736607,
+          "lng": -38.500586
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "nome_zona": "zona 18",
+      "rua_avenida": "Av. R",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.739133,
+          "lng": -38.496141
+        },
+        {
+          "lat": -3.738293,
+          "lng": -38.498833
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "nome_zona": "zona 19",
+      "rua_avenida": "Av. S",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.733659,
+          "lng": -38.493219
+        },
+        {
+          "lat": -3.738456,
+          "lng": -38.494766
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "nome_zona": "zona 20",
+      "rua_avenida": "Av. T",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.733328,
+          "lng": -38.494176
+        },
+        {
+          "lat": -3.738087,
+          "lng": -38.495717
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "nome_zona": "zona 21",
+      "rua_avenida": "Av. U",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.729378,
+          "lng": -38.496176
+        },
+        {
+          "lat": -3.73717,
+          "lng": -38.498626
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "nome_zona": "zona 22",
+      "rua_avenida": "Av. V",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.731774,
+          "lng": -38.499096
+        },
+        {
+          "lat": -3.737512,
+          "lng": -38.500941
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "nome_zona": "zona 23",
+      "rua_avenida": "Av. X",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.733024,
+          "lng": -38.498415
+        },
+        {
+          "lat": -3.736858,
+          "lng": -38.499689
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "nome_zona": "zona 24",
+      "rua_avenida": "Av. Z",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.732623,
+          "lng": -38.49609
+        },
+        {
+          "lat": -3.740339,
+          "lng": -38.498568
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "nome_zona": "zona 25",
+      "rua_avenida": "Av. C",
+      "Bairro": "Tartaro",
+      "path": [
+        {
+          "lat": -3.732623,
+          "lng": -38.49609
+        },
+        {
+          "lat": -3.740339,
+          "lng": -38.498568
+        }
+      ]
+    },
+    {
+      "nome_zona": "testando",
+      "rua_avenida": "teste",
+      "Bairro": "1",
+      "path": [
+        {
+          "lat": -3.727188,
+          "lng": -38.499744
+        },
+        {
+          "lat": -3.731005,
+          "lng": -38.500989
+        }
+      ],
+      "id": 28
+    }
+  ]
+}
