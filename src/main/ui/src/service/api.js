@@ -1,7 +1,11 @@
 import axios from "axios";
 
+// const API = axios.create({
+//     baseURL: "https://rota-ativa-pads.escowolf.repl.co"
+// })
+
 const API = axios.create({
-    baseURL: "https://rota-ativa-pads.escowolf.repl.co"
+    baseURL: "http://localhost:8080/"
 })
 
 const token = window.localStorage.getItem('token')
