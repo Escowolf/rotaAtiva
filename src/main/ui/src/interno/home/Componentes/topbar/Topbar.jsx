@@ -3,7 +3,7 @@ import "./Topbar.css";
 
 export function TopBar() {
 
-  function logout(){
+  function logout() {
     localStorage.removeItem("token")
     localStorage.removeItem("usuarioLogado")
   }
@@ -11,22 +11,12 @@ export function TopBar() {
   return (
     <>
       <section id="wrapper">
-        <nav className="navbar navbar-expand-md">
-          <div className="container-fluid mx-2">
-            {/* NAVBAR - BOTÃO MENU */}
-            <div className="navbar-header">
-              {/* LOGO */}
-              <Link className="navbar-brand" to="/">
-                Rota<span className="main-color">Ativa</span>
-              </Link>
-            </div>
-
-            <li className='cabecalho_menu-item'>
-              <Link to={`/`} onClick={logout}>
-                <img src="/img/right-from-bracket-solid.svg" alt="entrar" />
-                <span>Deslogar</span>
-              </Link>
-            </li>
+        <nav className="navbar">
+          <div className="cabecalho_menu-item">
+            <Link to={`/`} onClick={logout}>
+              <span>Deslogar</span>
+              <img src="/img/right-from-bracket-solid.svg" alt="deslogar" />
+            </Link>
           </div>
         </nav>
       </section>

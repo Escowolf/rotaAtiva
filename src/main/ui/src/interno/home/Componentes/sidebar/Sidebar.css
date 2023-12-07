@@ -15,8 +15,13 @@
   color: #eee;
 }
 
-.sidebar .sidebar-header {
-  border-bottom: 1px solid #ffffff;
+.sidebar > .sidebar-header {
+  background-color: var(--navbar-bg-color);
+  border: none !important;
+	padding-left: 10%;
+  display:flex;
+  align-items: center;
+  height:90px;
 }
 
 .sidebar .sidebar-header h5 a {
@@ -35,20 +40,12 @@
 }
 
 .sidebar > ul > li {
-  padding: 0.7rem 1.75rem;
+  padding: .75rem .75rem;
 }
 
 .sidebar ul > li > a {
   color: #d1d5db;
   text-decoration: none;
-}
-
-/* Start numbers */
-.sidebar ul > li > a > .num {
-  line-height: 0;
-  border-radius: 3px;
-  font-size: 14px;
-  padding: 0px 5px;
 }
 
 .sidebar ul > li > i {
@@ -74,7 +71,7 @@
 /* Start dropdown menu */
 .sidebar ul .sidebar-dropdown {
   padding-top: 10px;
-  padding-left: 30px;
+  padding-left: 20px;
   display: none;
 }
 .sidebar ul .sidebar-dropdown.active {
@@ -88,7 +85,7 @@
 }
 
 .btnSideBar{
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -97,6 +94,11 @@
 
 .btnSideBar img{
   height: 1.5rem;
+}
+
+.margem-relatorio{
+  position:relative;
+  margin: 1% 5% 0 calc(var(--sidebar-width) + 2%);
 }
 
 @media screen and (max-width:  1024px) and (min-width: 769px){

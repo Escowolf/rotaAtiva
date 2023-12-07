@@ -38,7 +38,7 @@ export function NavbarLateral() {
         data-close="show-side-navigation1"
       ></i>
       {/* NAVBAR LATERAL - IMAGEM DE USER + TIPO DE USER */}
-      <div className="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
+      <div className="sidebar-header">
         <img
           className="rounded-pill img-fluid"
           width="65"
@@ -57,8 +57,8 @@ export function NavbarLateral() {
         </div>
       </div>
       {/* NAVBAR LATERAL - LINKS DE ACESSO */}
-      <ul className="categories list-unstyled">
-        <li className="">
+      <ul className="menu">
+        <li className="itens">
           <i className="uil-estate fa-fw"></i>
           <Link className="btnSideBar" to="/menulogado/1">
             <img src="/img/dashboard.svg" alt="Dashboard" />
@@ -69,14 +69,14 @@ export function NavbarLateral() {
           <i className="uil-map-marker"></i>
           <Link className="btnSideBar" to="/menulogado/relatorioVagas">
             <img src="/img/relatorio.svg" alt="Relatorio de Vagas" />
-            <span>Relatorio de Vagas</span>
+            <span>Relatório de Vagas</span>
           </Link>
         </li>
         <li className="">
           <i className="uil-map-marker"></i>
           <Link className="btnSideBar" to="/menulogado/relatorioUso">
             <img src="/img/relatorio.svg" alt="Relatorio de Uso" />
-            <span>Relatorio de Uso</span>
+            <span>Relatório de Uso</span>
           </Link>
         </li>
         <li className="">

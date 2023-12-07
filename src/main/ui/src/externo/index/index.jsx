@@ -4,8 +4,6 @@ import { useState } from "react";
 import { log } from "../../dados/dadosFormulario";
 import { Link, useNavigate } from "react-router-dom";
 import UserService from "../../service/users";
-// import { Cabecalho } from "../cabecalho/cabecalho";
-// import { login } from "../../service/autenticacao";
 import API from "../../service/api";
 import AdmService from "../../service/adm";
 import Alert from '@mui/material/Alert';
