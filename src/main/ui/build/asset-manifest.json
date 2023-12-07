@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a9f73c6f.css",
+    "main.js": "/static/js/main.2b21d92b.js",
+    "static/media/background.png": "/static/media/background.94cbaaed8af55c411756.png",
+    "static/media/zona-azul-cadastro.jpg": "/static/media/zona-azul-cadastro.822023944b7a0604882d.jpg",
+    "index.html": "/index.html",
+    "main.a9f73c6f.css.map": "/static/css/main.a9f73c6f.css.map",
+    "main.2b21d92b.js.map": "/static/js/main.2b21d92b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9f73c6f.css",
+    "static/js/main.2b21d92b.js"
+  ]
+}
