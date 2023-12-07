@@ -54,32 +54,7 @@ public class AdministradorController {
 
     // }
 
-    // @PostMapping("/editar")
-    // public void update(@RequestBody AdministradorModel administrador) {
-
-    //     repository.findById(administrador.getId())
-    //             .map(existingUsuario -> {
-    //                 if (administrador.getCpf() != null) {
-    //                     existingUsuario.setCpf(administrador.getCpf());
-    //                 }
-    //                 if (administrador.getNome() != null) {
-    //                     existingUsuario.setNome(administrador.getNome());
-    //                 }
-    //                 if (administrador.getEmail() != null) {
-    //                     existingUsuario.setEmail(administrador.getEmail());
-    //                 }
-    //                 if (administrador.getPassword() != null) {
-    //                     existingUsuario.setPassword(administrador.getPassword());
-    //                 }
-    //                 if (administrador.getNascimento() != null) {
-    //                     existingUsuario.setNascimento(administrador.getNascimento());
-    //                 }
-    //                 return existingUsuario;
-    //             })
-    //             .map(repository::save);
-
-    // }
-
+    
     @GetMapping("/listarTodos")
     public ResponseEntity<List<Administrador>> listarTodos() {
         return ResponseEntity.ok(repository.findAll());
