@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter } from "react-router-dom";
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import ReactDOM from 'react-dom';
+import App from './components/App';
+import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { urls } from "./utils/urlUtils";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+ReactDOM.render(
+  <Router>
+    <Route path={urls.index.path} component={App} />
+  </Router>
+  , document.getElementById('root'));
+registerServiceWorker();
