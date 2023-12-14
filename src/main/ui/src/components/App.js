@@ -24,7 +24,7 @@ function App() {
       <Routes>
 
         <Route element={<Index />} exact path="/"></Route>
-        <Route element={<Cadastro />} exact path="/cafibdastro"></Route>
+        <Route element={<Cadastro />} exact path="/cadastro"></Route>
         <Route element={<Home />} exact path="/menulogado">
           <Route element={<Dashboard />} path=":id" />
           <Route element={<Map />} path="mapa" />
