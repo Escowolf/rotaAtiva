@@ -1,6 +1,6 @@
 
-import "./reset.css";
-import "./base.css";
+// import "./reset.css";
+// import "./base.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Cabecalho } from "../externo/cabecalho/cabecalho";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -16,14 +16,15 @@ import Dashboard from "../interno/dashboard/dashboard";
 import { EditaPerfil } from "../interno/edita_perfil/edita_perfil";
 import { EditarZona } from "../interno/adicionar_remover/EditarZona";
 import { RemoverZona } from "../interno/adicionar_remover/RemoverZona";
+import { urls } from "../utils/urlUtils";
+
 
 function App() {
   return (
     <>
       {useLocation().pathname === "/" ? <Cabecalho /> : ""}
       <Routes>
-
-        <Route element={<Index />} exact path="/"></Route>
+        <Route element={<Index />} exact path={urls.index.path}></Route>
         <Route element={<Cadastro />} exact path="/cadastro"></Route>
         <Route element={<Home />} exact path="/menulogado">
           <Route element={<Dashboard />} path=":id" />
