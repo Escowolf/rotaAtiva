@@ -1,6 +1,6 @@
 
-// import "./reset.css";
-// import "./base.css";
+import "./reset.css";
+import "./base.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Cabecalho } from "./externo/cabecalho/cabecalho";
 import { Route, Routes, useLocation } from "react-router-dom";
