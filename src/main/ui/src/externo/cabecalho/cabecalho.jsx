@@ -11,25 +11,16 @@ export function Cabecalho() {
                         <img src="/img/logo.png" alt="logo" />
                     </Link>
                 </div>
-                <nav className='cabecalho_menu'>
+                <div className='cabecalho_menu'>
                     <ul>
-                        {id != null
-                            ?
-                            <li className='cabecalho_menu-item'>
-                                <Link to={`/menulogado/${id}`}>
-                                    <img src="/img/right-to-bracket-solid.svg" alt="entrar" />
-                                    <span>Entrar</span>
-                                </Link>
-                            </li>
-                            :
-                            <li className='cabecalho_menu-item'>
-                                <Link to="/login">
-                                    <span>Contato</span>
-                                </Link>
-                            </li>
-                        }
+                        <li>
+                            <Link to="/contato">
+                                Contato
+                            </Link>
+                        </li>
+
                     </ul>
-                </nav>
+                </div>
             </div>
         </header>
     )

@@ -33,11 +33,11 @@ function App() {
           <Route element={<Map />} path={urls.mapa.path}/>
           <Route element={<RelatorioVagas />} path={urls.relatorioVagas.path} />
           <Route element={<RelatorioUsuario />} path={urls.relatorioUsuarios.path} />
-          <Route element={<DadoUsuario />} path="dadoUsuario/:id" />
-          <Route element={<RelatorioDeUso />} path="relatorioUso" />
-          <Route element={<EditaPerfil />} path="perfil" />
-          <Route element={<EditarZona />} path="editarZona" />
-          <Route element={<RemoverZona />} path="removerZona" />
+          <Route element={<DadoUsuario />} path={urls.relatorioUsuarios.path} />
+          <Route element={<RelatorioDeUso />} path={urls.relatorioUsuarios.path} />
+          <Route element={<EditaPerfil />} path={urls.relatorioUsuarios.path} />
+          <Route element={<EditarZona />} path={urls.relatorioUsuarios.path} />
+          <Route element={<RemoverZona />} path={urls.relatorioUsuarios.path} />
         </Route>
       </Routes>
     </>

@@ -57,7 +57,7 @@ export function Index() {
   return (
     <section className="principal">
       <div className="flex">
-        <div className="principal_lado_esq">
+        <div className="container principal_lado_esq">
           <div className="principal_lado_esq_texto">
             <h2>Encontre sua</h2>
             <h2>vaga aqui</h2>
@@ -70,7 +70,7 @@ localizar zona azul em Fortaleza!
             <Link to="/cadastro" className="botao_alerta">Cadastre-se</Link>
           </div>
         </div>
-        <div className="principal_lado_dir">
+        <div className="container principal_lado_dir">
           <div className="login_caixa">
             <h3>Inicie sua sessão</h3>
             <Collapse in={alert}>
