@@ -1,5 +1,8 @@
 export const urls = {
     index : {nome: 'Index', path:'/'},
+    cadastro : {nome: 'Cadastro', path:'/cadastro'},
+    contato : {nome: 'Contato', path:'/contato'},
+    home: {nome: 'Home', path:'/menulogado'},
     dashboard : { nome: 'Dashboard', path:':id/'},
     mapa : { nome: 'Mapa', path:'mapa/'},
     relatorioVagas : { nome: 'RelatorioVagas', path:'relatorioVagas'},
