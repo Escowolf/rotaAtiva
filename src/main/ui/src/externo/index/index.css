@@ -1,7 +1,10 @@
 .principal {
   background-image: url("/public/img/background.png");
-  background-size:auto;
-  background-position: 450% 60%;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -600px;
+  background-attachment: inherit;
   height:100vh;
   margin: 0;
   padding: 0;
