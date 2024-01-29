@@ -92,7 +92,7 @@ export function Index() {
                       img={item.img}
                     />
                   );
-                })}
+                })} 
 
                 <input
                   className="login_formulario_botao"
