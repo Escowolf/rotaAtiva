@@ -41,7 +41,7 @@ const Pagination = props => {
             className='pagination-container'
           >
             <li
-              className={currentPage != 1 ? "pagination-item" : "pagination-item disabled" }
+              className={currentPage !== 1 ? "pagination-item" : "pagination-item disabled" }
               onClick={onPrevious}
             >
               <div className="arrow left" />
@@ -61,7 +61,7 @@ const Pagination = props => {
               );
             })}
             <li
-              className={currentPage != lastPage ? "pagination-item" : "pagination-item disabled" }
+              className={currentPage !== lastPage ? "pagination-item" : "pagination-item disabled" }
               onClick={onNext}  
             >
               <div className="arrow right" />
