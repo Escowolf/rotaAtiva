@@ -16,24 +16,28 @@ import Dashboard from "./interno/dashboard/dashboard";
 import { EditaPerfil } from "./interno/edita_perfil/edita_perfil";
 import { EditarZona } from "./interno/adicionar_remover/EditarZona";
 import { RemoverZona } from "./interno/adicionar_remover/RemoverZona";
+import { urls } from "./utils/urlUtils";
+import { Contato } from "./externo/contato/contato";
+
 
 function App() {
   return (
     <>
       {useLocation().pathname === "/" ? <Cabecalho /> : ""}
       <Routes>
-        <Route element={<Index />} exact path="/"></Route>
-        <Route element={<Cadastro />} exact path="/cadastro"></Route>
-        <Route element={<Home />} exact path="/menulogado">
-          <Route element={<Dashboard />} path=":id"/>
-          <Route element={<Map />} path="mapa"/>
-          <Route element={<RelatorioVagas/>} path="relatorioVagas"/>
-          <Route element={<RelatorioUsuario/>} path="relatorioUsuarios/:id"/>
-          <Route element={<DadoUsuario/>} path="dadoUsuario/:id"/>
-          <Route element={<RelatorioDeUso/>} path="relatorioUso"/>
-          <Route element={<EditaPerfil/>} path="perfil"/>
-          <Route element={<EditarZona/>} path="editarZona"/>
-          <Route element={<RemoverZona/>} path="removerZona"/>
+        <Route element={<Index />} exact path={urls.index.path}></Route>
+        <Route element={<Cadastro />} exact path={urls.cadastro.path}></Route>
+        <Route element={<Contato/>} exact path={urls.contato.path}></Route>
+        <Route element={<Home />} exact path={urls.home.path}>
+          <Route element={<Dashboard />} path={urls.dashboard.path} />
+          <Route element={<Map />} path={urls.mapa.path}/>
+          <Route element={<RelatorioVagas />} path={urls.relatorioVagas.path} />
+          <Route element={<RelatorioUsuario />} path={urls.relatorioUsuarios.path} />
+          <Route element={<DadoUsuario />} path={urls.relatorioUsuarios.path} />
+          <Route element={<RelatorioDeUso />} path={urls.relatorioUsuarios.path} />
+          <Route element={<EditaPerfil />} path={urls.relatorioUsuarios.path} />
+          <Route element={<EditarZona />} path={urls.relatorioUsuarios.path} />
+          <Route element={<RemoverZona />} path={urls.relatorioUsuarios.path} />
         </Route>
       </Routes>
     </>

@@ -29,23 +29,23 @@ export function RelatorioDeUso() {
 
   const [lista, setLista] = useState([]);
 
-  function testaBusca(nome) {
-    const regex = new RegExp(buscar, "i");
-    return regex.test(nome);
-  }
+  // function testaBusca(nome) {
+  //   const regex = new RegExp(buscar, "i");
+  //   return regex.test(nome);
+  // }
 
-  useEffect(() => {
-    const novaLista = vagas.filter(
-      (item) => testaBusca(item.logradouro) || testaBusca(item.bairro)
-    );
-    setLista(novaLista);
-  }, [buscar]);
+  // useEffect(() => {
+  //   const novaLista = vagas.filter(
+  //     (item) => testaBusca(item.logradouro) || testaBusca(item.bairro)
+  //   );
+  //   setLista(novaLista);
+  // }, [buscar]);
 
   useEffect(() => {
     vagaService.getVaga().then((resp) => {
       setDados(resp.data);
     });
-  }, []);
+  });
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -54,7 +54,7 @@ export function RelatorioDeUso() {
       setVagas(resp.data);
       setLista(resp.data);
     });
-  }, []);
+  });
 
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;

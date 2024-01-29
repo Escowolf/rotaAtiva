@@ -1,7 +1,10 @@
 .principal {
   background-image: url("/public/img/background.png");
-  background-size:auto;
-  background-position: 450% 60%;
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -600px;
+  background-attachment: inherit;
   height:100vh;
   margin: 0;
   padding: 0;
@@ -23,8 +26,7 @@ label {
 }
 
 .principal_lado_dir {
-  padding: auto 5%;
-  margin: auto;
+  margin: 0;
   width: 50%;
   height:100vh;
   background-color: #f5f5f5;
@@ -87,8 +89,7 @@ label {
 }
 
 .principal_lado_esq {
-  padding: auto 5%;
-  margin: auto;
+  margin: 0;
   height: 100vh;
   width: 50%;
   color: var(--branco);
@@ -97,7 +98,13 @@ label {
 .principal_lado_esq_texto {
   padding: 5rem 8rem;
   margin: auto;
-  min-width: 150px;
+  min-width: 200px;
+}
+
+.principal_lado_esq_texto>p {
+  padding-top: 25px;
+  margin: auto;
+  min-width: 200px;
 }
 
 .principal_lado_esq>h2 {
@@ -107,9 +114,10 @@ label {
 }
 
 .principal_lado_esq>p {
-  padding: 0rem 4rem;
+  padding: 2rem 5rem;
   font-size: 1.5rem;
 }
+
 
 @media screen and (max-width: 768px) {
   .principal {
