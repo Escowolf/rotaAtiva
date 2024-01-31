@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import './cabecalho.css';
 
 export function Cabecalho() {
-    let id = localStorage.getItem("usuarioLogado")
     return (
         <header className="cabecalho">
             <div className='container cabecalho_caixa'>

@@ -29,14 +29,8 @@ export function Index() {
   function logar(e) {
     e.preventDefault();
 
-    const user = {
-      email: email,
-      password: senha
-    }
-
     signInWithEmailAndPassword(auth, email, senha)
   .then((userCredential) => {
-    const user1 = userCredential.user;
       getIdToken(auth.currentUser)
         .then((idToken) => {
           localStorage.setItem("token", JSON.stringify(idToken));
