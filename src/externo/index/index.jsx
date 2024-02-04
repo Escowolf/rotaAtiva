@@ -1,7 +1,7 @@
 import "./index.css";
-import CaixaFormularioLogin from "../../../../../components/caixaFormularioLogin/caixaFormularioLogin";
+import CaixaFormularioLogin from "../../components/caixaFormularioLogin/caixaFormularioLogin";
 import { useState } from "react";
-import { log } from "../../../../../dados/dadosFormulario";
+import { log } from "../../dados/dadosFormulario";
 import { Link, useNavigate } from "react-router-dom";
 import Alert from '@mui/material/Alert';
 import { Collapse } from "@mui/material";

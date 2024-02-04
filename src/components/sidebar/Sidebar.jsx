@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import UserService from "../../../../../../../service/users";
+import UserService from "../../service/users";
 import "./Sidebar.css";
 
 export function NavbarLateral() {
-  const userService = new UserService();
 
   const [usuario, setUsuario] = useState({
     nome: "",
@@ -13,7 +12,8 @@ export function NavbarLateral() {
     datanasc: ""
   });
 
-  useEffect(() => {
+  const userService = new UserService(() => {
+
     userService.getUsuario().then((resp) => {
       console.log(resp)
       let id = localStorage.getItem("usuarioLogado")
@@ -22,8 +22,8 @@ export function NavbarLateral() {
         setUsuario(login);
         console.log(login);
       }
-    })
-  }, [])
+    }, [userService])
+  })
 
 
 

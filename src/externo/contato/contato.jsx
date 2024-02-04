@@ -1,5 +1,5 @@
 import "./contato.css";
-import { Cabecalho } from "../../main/ui/src/externo/cabecalho/cabecalho";
+import { Cabecalho } from "../cabecalho/cabecalho";
 
 
 export function Contato() {

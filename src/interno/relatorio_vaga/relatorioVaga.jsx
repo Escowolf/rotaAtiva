@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import Pagination from "../../../../../components/Paginacao/Pagination";
+import Pagination from "../../components/Paginacao/Pagination";
 import "./relatorioVaga.css";
-import VagaService from "../../../../../service/vaga";
+import VagaService from "../../service/vaga";
 import { Link } from "react-router-dom";
 
 let PageSize = 10;

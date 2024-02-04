@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CaixaFormularioLogin from "../../../../../components/caixaFormularioLogin/caixaFormularioLogin";
+import CaixaFormularioLogin from "../../components/caixaFormularioLogin/caixaFormularioLogin";
 import "./cadastro.css";
-import { infoBasic } from "../../../../../dados/dadosFormulario";
+import { infoBasic } from "../../dados/dadosFormulario";
 import { Link } from "react-router-dom";
 import { Cabecalho } from "../cabecalho/cabecalho";
 

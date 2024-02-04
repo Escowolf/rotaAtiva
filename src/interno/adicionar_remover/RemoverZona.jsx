@@ -1,9 +1,9 @@
 import "./editar_vaga/adicionar_remover.css";
 import { useEffect, useMemo, useState } from "react";
-import VagaService from "../../../../../service/vaga";
-import Pagination from "../../../../../components/Paginacao/Pagination";
+import VagaService from "../../service/vaga";
+import Pagination from "../../components/Paginacao/Pagination";
 import { Link } from "react-router-dom";
-import AreasService from "../../../../../service/areas";
+import AreasService from "../../service/areas";
 import { Alert, Collapse } from "@mui/material";
 
 let PageSize = 6;
